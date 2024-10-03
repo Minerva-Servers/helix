@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5548,7 +5557,9 @@ Up
 <p>Plugin hooks are regular hooks that can be used in your schema with <code>Schema:HookName(args)</code>, in your plugin with
 <code>PLUGIN:HookName(args)</code>, or in your addon with <code>hook.Add(&quot;HookName&quot;, function(args) end)</code>.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5558,57 +5569,106 @@ Up
 
 
 
+
+
+
 					<p>Adjusts the data used just before creating a new character.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that is creating the character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">payload</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Table of data to be used for character creation</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">newPayload</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Table of data be merged with the current payload</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:AdjustCreationPayload(client, payload, newPayload)
 	newPayload.money = payload.attributes["stm"] -- Sets the characters initial money to the stamina attribute value.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="AdjustStaminaOffset">
@@ -5617,58 +5677,108 @@ end
 
 
 
+
+
+
 					<p>Adjusts a player's current stamina offset amount.  This is called when the player's stamina is about to be changed; every
  <code>0.25</code> seconds on the server, and every frame on the client.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player whose stamina is changing</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">baseOffset</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Amount the stamina is changing by. This can be a positive or negative number depending if they are
  exhausting or regaining stamina</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>New offset to use</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:AdjustStaminaOffset(client, baseOffset)
 	return baseOffset * 2 -- Drain/Regain stamina twice as fast.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="BuildBusinessMenu">
@@ -5677,29 +5787,54 @@ end
 
 
 
+
+
+
 					<p>Creates the business panel in the tab menu.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to create the business menu</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:BuildBusinessMenu()
 	return LocalPlayer():IsAdmin() -- Only builds the business menu for admins.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanAutoFormatMessage">
@@ -5708,68 +5843,128 @@ end
 
 
 
+
+
+
 					<p>Whether or not a message can be auto formatted with punctuation and capitalization.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">speaker</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that sent the message</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">chatType</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Chat type of the message. This will be something registered with <a href="../../libraries/ix.chat/#ix.chat.Register">ix.chat.Register</a> - like <code>ic</code>, <code>ooc</code>, etc.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Unformatted text of the message</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow auto formatting on the message</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanAutoFormatMessage(speaker, chatType, text)
 	return false -- Disable auto formatting outright.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanCreateCharacterInfo">
@@ -5778,19 +5973,37 @@ end
 
 
 
+
+
+
 					<p>Whether or not certain information can be displayed in the character info panel in the tab menu.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">suppress</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Information to <strong>NOT</strong> display in the UI - modify this to change the behaviour. This is a table of the names of
@@ -5809,16 +6022,27 @@ end
 
 <p> Note that schemas/plugins can add additional character info panels.</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanCreateCharacterInfo(suppress)
 	suppress.attributes = true -- Hides the attributes panel from the character info tab
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanDrawAmmoHUD">
@@ -5827,38 +6051,74 @@ end
 
 
 
+
+
+
 					<p>Whether or not the ammo HUD should be drawn.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">weapon</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Weapon the player currently is holding</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to draw the ammo hud</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanDrawAmmoHUD(weapon)
 	if (weapon:GetClass() == "weapon_frag") then -- Hides the ammo hud when holding grenades.
 		return false
@@ -5866,7 +6126,11 @@ end
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerAccessDoor">
@@ -5875,68 +6139,128 @@ end
 
 
 
+
+
+
 					<p>Called when a player tries to use abilities on the door, such as locking.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> The client trying something on the door.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">door</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> The door entity itself.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">access</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The access level used when called.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the client access.</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerAccessDoor(client, door, access)
 	return true -- Always allow access.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerCombineItem">
@@ -5945,62 +6269,118 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player is allowed to combine an item <code>other</code> into the given <code>item</code>.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to combine an item into another</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> instance ID of the item being dropped onto</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">other</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> instance ID of the item being combined into the first item, this can be invalid due to it being from clientside</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to combine the items</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerCombineItem(client, item, other)
 	local otherItem = ix.item.instances[other]
 
@@ -6010,7 +6390,11 @@ end
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerCreateCharacter">
@@ -6019,64 +6403,120 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player is allowed to create a new character with the given payload.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to create a new character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">payload</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Data that is going to be used for creating the character</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p> Whether or not the player is allowed to create the character. This function defaults to <code>true</code>, so you
  should only ever return <code>false</code> if you're disallowing creation. Otherwise, don't return anything as you'll prevent any other
  calls to this hook from running.</p>
 							</li>
 
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Language phrase to use for the error message</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">...</span>
+
 
 								<p>Arguments to use for the language phrase</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerCreateCharacter(client, payload)
 	if (!client:IsAdmin()) then
 		return false, "notNow" -- only allow admins to create a character
@@ -6085,7 +6525,11 @@ end
 -- non-admins will see the message "You are not allowed to do this right now!"
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerDropItem">
@@ -6094,56 +6538,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player is allowed to drop the given <code>item</code>.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to drop an item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> instance ID of the item being dropped</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to drop the item</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerDropItem(client, item)
 	return false -- Never allow dropping items.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerEarnSalary">
@@ -6152,57 +6646,107 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can earn money at regular intervals.  This hook runs only if the player's character faction has
  a salary set - i.e <code>FACTION.pay</code> is set to something other than <code>0</code> for their faction.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player to give money to</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">faction</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Faction of the player's character</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to earn salary</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerEarnSalary(client, faction)
 	return client:IsAdmin() -- Restricts earning salary to admins only.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerEnterObserver">
@@ -6211,45 +6755,85 @@ end
 
 
 
+
+
+
 					<p>Whether or not the player is allowed to enter observer mode.  This is allowed only for admins by default and can be
  customized by server owners if the server is using a CAMI-compliant admin mod.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to enter observer</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to enter observer</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerEnterObserver(client)
 	return true -- Always allow observer.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerEquipItem">
@@ -6258,61 +6842,114 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can equip the given <code>item</code>.  This is called for items with <code>outfit</code>, <code>pacoutfit</code>, or <code>weapons</code> as
  their base. Schemas/plugins can utilize this hook for their items.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to equip the item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Item being equipped</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to equip the item</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerEquipItem(client, item)
 	return client:IsAdmin() -- Restrict equipping items to admins only.
 end
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../hooks/plugin/#CanPlayerUnequipItem">CanPlayerUnequipItem</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerHoldObject">
@@ -6321,56 +6958,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player is allowed to hold an entity with the hands SWEP.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to hold an entity</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity being held</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to hold the entity</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerHoldObject(client, entity)
 	return !(client:GetMoveType() == MOVETYPE_NOCLIP and !client:InVehicle()) -- Disallow players in observer holding objects.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerInteractEntity">
@@ -6379,79 +7066,148 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player is allowed to interact with an entity's interaction menu if it has one.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting interaction</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity being interacted with</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">option</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Option selected by the player</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
 
 
+
+
 								<p> Any data passed with the interaction option</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to interact with the entity</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerInteractEntity(client, entity, option, data)
 	return false -- Disallow interacting with any entity.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerInteractItem">
@@ -6460,80 +7216,148 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player is allowed to interact with an item via an inventory action (e.g picking up, dropping, transferring
  inventories, etc).  Note that this is for an item <em>table</em>, not an item <em>entity</em>. This is called after <a href="../../hooks/plugin/#CanPlayerDropItem">CanPlayerDropItem</a>
  and <a href="../../hooks/plugin/#CanPlayerTakeItem">CanPlayerTakeItem</a>.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting interaction</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">action</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The action being performed</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
 
 
+
+
 								<p> Item's instance ID or item table</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
 
 
+
+
 								<p> Any data passed with the action</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to interact with the item</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerInteractItem(client, action, item, data)
 	return false -- Disallow interacting with any item.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerJoinClass">
@@ -6542,68 +7366,128 @@ end
 
 
 
+
+
+
 					<p>Whether or not a plyer is allowed to join a class.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to join</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">class</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> ID of the class</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">info</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> The class table</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to join the class</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerJoinClass(client, class, info)
 	return client:IsAdmin() -- Restrict joining classes to admins only.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerKnock">
@@ -6612,56 +7496,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can knock on the door with the hands SWEP.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to knock</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Door being knocked on</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to knock on the door</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerKnock(client, entity)
 	return false -- Disable knocking on doors outright.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerOpenShipment">
@@ -6670,56 +7604,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can open a shipment spawned from the business menu.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to open the shipment</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Shipment entity</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to open the shipment</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerOpenShipment(client, entity)
 	return client:Team() == FACTION_BMD -- Restricts opening shipments to FACTION_BMD.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerSpawnContainer">
@@ -6728,68 +7712,128 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player is allowed to spawn a container entity.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to spawn a container</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">model</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Model of the container being spawned</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Container entity</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to spawn the container</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerSpawnContainer(client, model, entity)
 	return client:IsAdmin() -- Restrict spawning containers to admins.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerTakeItem">
@@ -6798,56 +7842,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player is allowed to take an item and put it in their inventory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to take the item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity corresponding to the item</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to take the item</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerTakeItem(client, item)
 	return !(client:GetMoveType() == MOVETYPE_NOCLIP and !client:InVehicle()) -- Disallow players in observer taking items.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerThrowPunch">
@@ -6856,44 +7950,84 @@ end
 
 
 
+
+
+
 					<p>Whether or not the player is allowed to punch with the hands SWEP.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting throw a punch</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to punch</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerThrowPunch(client)
 	return client:GetCharacter():GetAttribute("str", 0) > 0 -- Only allow players with strength to punch.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerTradeWithVendor">
@@ -6902,80 +8036,150 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can trade with a vendor.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to trade</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Vendor entity</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The uniqueID of the item being traded.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">isSellingToVendor</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> If the client is selling to the vendor</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the client to trade with the vendor</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerTradeWithVendor(client, entity, uniqueID, isSellingToVendor)
 	return false -- Disallow trading with vendors outright.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerUnequipItem">
@@ -6984,60 +8188,113 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can unequip an item.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player attempting to unequip an item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Item being unequipped</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to unequip the item</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerUnequipItem(client, item)
 	return false -- Disallow unequipping items.
 end
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../hooks/plugin/#CanPlayerEquipItem">CanPlayerEquipItem</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerUseBusiness">
@@ -7046,56 +8303,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can buy an item from the business menu.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that uses a business menu</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The uniqueID of the business menu item</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to buy an item from the business menu</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerUseBusiness(client, uniqueID)
  return false -- Disallow buying from the business menu.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerUseCharacter">
@@ -7104,56 +8411,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can use a character.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that wants to use a character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character that a player wants to use</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to load a character</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerUseCharacter(client, character)
 	return false -- Disallow using any character.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerUseDoor">
@@ -7162,56 +8519,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can use a door.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that wants to use a door</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Door that a player wants to use</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to use a door</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerUseDoor(client, character)
 	return false -- Disallow using any door.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerUseVendor">
@@ -7220,51 +8627,98 @@ end
 
 
 
+
+
+
 					<p>Determines whether a player can use a vendor.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">activator</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> The player attempting to use the vendor</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">vendor</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> The vendor entity being used</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Returns false if the player can't use the vendor</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanPlayerViewInventory">
@@ -7273,29 +8727,54 @@ end
 
 
 
+
+
+
 					<p>Whether or not a player can view his inventory.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to view his inventory</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanPlayerViewInventory()
 	return false -- Prevent player from viewing his inventory.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanSaveContainer">
@@ -7304,56 +8783,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not to save a container.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Container entity to save</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">inventory</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Container inventory</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to save a container</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanSaveContainer(entity, inventory)
  return false -- Disallow saving any container.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanTransferItem">
@@ -7362,62 +8891,118 @@ end
 
 
 
+
+
+
 					<p>Whether or not and item can be transferred from one inventory to another.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Item being transferred</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">currentInv</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Current inventory</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">oldInv</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Old inventory</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the item to be transferred</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CanTransferItem(item, currentInv, oldInv)
 	if (IsValid(item:GetOwner() and !item:GetOwner():IsAdmin()) then
 		return false -- Admins can transfer items.
@@ -7425,7 +9010,11 @@ end
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterAttributeBoosted">
@@ -7434,81 +9023,150 @@ end
 
 
 
+
+
+
 					<p>Called character's attributes are being boosted.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that is boosting the character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character that is being boosted</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">attribID</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> ID of the attribute being boosted</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">boostID</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> ID of the boost</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">boostAmount</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Amount of the boost</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CharacterAttributeBoosted(client, character, attribID, boostID, boostAmount)
 	client:Notify("Your character's "..ix.attributes.list[attribID].name.." has been boosted by "..boostAmount..".")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterAttributeUpdated">
@@ -7517,69 +9175,128 @@ end
 
 
 
+
+
+
 					<p>Called when a character's attribute is being updated.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that is updating the character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character that is being updated</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Key of the attribute being updated</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">value</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Value of the attribute</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CharacterAttributeUpdated(client, character, key, value)
 	client:Notify("Your character's "..key.." has been updated to "..value..".")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterDeleted">
@@ -7588,51 +9305,96 @@ end
 
 
 
+
+
+
 					<p>Called when a character is being deleted.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that is deleting the character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">id</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> ID of the character being deleted</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">isCurrentChar</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not the character is the current character</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CharacterDeleted(client, id, isCurrentChar)
 	if (CLIENT and isCurrentChar) then
 		client:Notify("You have deleted your current character.")
@@ -7640,7 +9402,11 @@ end
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterHasFlags">
@@ -7649,56 +9415,106 @@ end
 
 
 
+
+
+
 					<p>Returns if the character has the given flags.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character to check</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">flags</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Flags to check</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the character has the flags</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CharacterHasFlags(character, flags)
 	return {"p", "e", "t"} -- Character has the spawning, physgun and toolgun flags.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterLoaded">
@@ -7707,33 +9523,62 @@ end
 
 
 
+
+
+
 					<p>Called when a character is loaded.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character that is being loaded</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CharacterLoaded(character)
 	print("Character "..character:GetName().." has been loaded.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterPostSave">
@@ -7742,33 +9587,62 @@ end
 
 
 
+
+
+
 					<p>Called when a character was saved.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> that was saved</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CharacterPostSave(character)
 	print("Character "..character:GetName().." has been saved.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterPreSave">
@@ -7777,33 +9651,62 @@ end
 
 
 
+
+
+
 					<p>Called before a character is saved.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character that is being saved</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:CharacterPreSave(character)
 	print("Character "..character:GetName().." is about to be saved.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterRecognized">
@@ -7812,16 +9715,27 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterRestored">
@@ -7830,28 +9744,54 @@ end
 
 
 
+
+
+
 					<p>Called when a character was restored.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> that was restored</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterVarChanged">
@@ -7860,71 +9800,123 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">oldVar</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">value</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CharacterVendorTraded">
@@ -7933,71 +9925,123 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">isSellingToVendor</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ChatboxCreated">
@@ -8006,16 +10050,27 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ChatboxPositionChanged">
@@ -8024,71 +10079,123 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">x</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">y</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ColorSchemeChanged">
@@ -8097,20 +10204,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">color</span>
+
+
 
 
 
@@ -8118,11 +10242,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ContainerRemoved">
@@ -8131,40 +10263,76 @@ end
 
 
 
+
+
+
 					<p>Called when a container was removed.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">container</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Container that was removed</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">inventory</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Container inventory</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CreateCharacterInfo">
@@ -8173,20 +10341,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
+
+
 
 
 
@@ -8194,11 +10379,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CreateCharacterInfoCategory">
@@ -8207,20 +10400,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
+
+
 
 
 
@@ -8228,11 +10438,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CreateItemInteractionMenu">
@@ -8241,58 +10459,101 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">icon</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">menu</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">itemTable</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CreateMenuButtons">
@@ -8301,20 +10562,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">tabs</span>
+
+
 
 
 
@@ -8322,11 +10600,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CreateShipment">
@@ -8335,40 +10621,76 @@ end
 
 
 
+
+
+
 					<p>Called when a shipment was created.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that ordered the shipment</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Shipment entity</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="DatabaseConnected">
@@ -8377,13 +10699,24 @@ end
 
 
 
+
+
+
 					<p>Called when a server has connected to the database.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="DatabaseConnectionFailed">
@@ -8392,28 +10725,54 @@ end
 
 
 
+
+
+
 					<p>Called when a server failed to connect to the database.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">error</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Error that prevented server from connecting to the database</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="DoPluginIncludes">
@@ -8422,45 +10781,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">path</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">pluginTable</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="DrawCharacterOverview">
@@ -8469,16 +10862,27 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="DrawHelixModelView">
@@ -8487,45 +10891,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="DrawPlayerRagdoll">
@@ -8534,20 +10972,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
+
+
 
 
 
@@ -8555,11 +11010,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetCharacterDescription">
@@ -8568,20 +11031,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
+
+
 
 
 
@@ -8589,11 +11069,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetCharacterName">
@@ -8602,50 +11090,96 @@ end
 
 
 
+
+
+
 					<p>Returns the name of the character to be displayed in the chat box or other areas.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">speaker</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that is speaking</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">chatType</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Chat type of the message. This will be something registered with <a href="../../libraries/ix.chat/#ix.chat.Register">ix.chat.Register</a> - like <code>ic</code>, <code>ooc</code>, etc.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Name of the character</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- Show the name of the character at all times to admins.
 function PLUGIN:GetCharacterName(speaker, chatType)
 	if (LocalPlayer():IsAdmin()) then
@@ -8654,7 +11188,11 @@ function PLUGIN:GetCharacterName(speaker, chatType)
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetChatPrefixInfo">
@@ -8663,20 +11201,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
+
+
 
 
 
@@ -8684,11 +11239,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetCrosshairAlpha">
@@ -8697,20 +11260,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">curAlpha</span>
+
+
 
 
 
@@ -8718,11 +11298,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetDefaultAttributePoints">
@@ -8731,45 +11319,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">count</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetDefaultCharacterName">
@@ -8778,45 +11400,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">faction</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetMaxPlayerCharacter">
@@ -8825,20 +11481,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
+
+
 
 
 
@@ -8846,11 +11519,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetPlayerDeathSound">
@@ -8859,59 +11540,109 @@ end
 
 
 
+
+
+
 					<p>Returns the sound to emit from the player upon death.  If nothing is returned then it will use the default male/female death
  sounds.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that died</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Sound to play</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p><code>false</code> if a sound shouldn't be played at all</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:GetPlayerDeathSound(client)
 	-- play impact sound every time someone dies
 	return "physics/body/body_medium_impact_hard1.wav"
 end
 </code></pre>
+
 					<pre><code>function PLUGIN:GetPlayerDeathSound(client)
 	-- don't play a sound at all
 	return false
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetPlayerEntityMenu">
@@ -8920,45 +11651,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">options</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetPlayerIcon">
@@ -8967,44 +11732,84 @@ end
 
 
 
+
+
+
 					<p>Returns the player's icon to be displayed in the chat box.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">speaker</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that is speaking</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Icon to display</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:GetPlayerIcon(speaker)
 	return "icon16/user.png" -- Use the default user icon.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetPlayerPainSound">
@@ -9013,44 +11818,84 @@ end
 
 
 
+
+
+
 					<p>Returns the sound to emit from the player upon getting damage.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Client that received damage</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Sound to emit</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:GetPlayerPainSound(client)
 	return "NPC_MetroPolice.Pain" -- Make players emit MetroPolice pain sound.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetPlayerPunchDamage">
@@ -9059,68 +11904,128 @@ end
 
 
 
+
+
+
 					<p>Returns the damage that the player should deal with his punches.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Client that is punching</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">damage</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Base damage of the punch</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">context</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Context of the punch</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Damage to deal</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:GetPlayerPunchDamage(client, damage, context)
 	return (client:IsAdmin() and damage * 2) or damage -- Admins deal double damage.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetSalaryAmount">
@@ -9129,60 +12034,113 @@ end
 
 
 
+
+
+
 					<p>Returns the salary that character should get instead of his faction salary.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Client that is receiving salary</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">faction</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Faction of the player's character</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Character salary</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:GetSalaryAmount(client, faction)
  return 0 -- Everyone get no salary.
 end
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../hooks/plugin/#CanPlayerEarnSalary">CanPlayerEarnSalary</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetTypingIndicator">
@@ -9191,45 +12149,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="InitializedChatClasses">
@@ -9238,13 +12230,23 @@ end
 
 
 
+
+
+
 					<p>Registers chat classes after the core framework chat classes have been registered.  You should usually create your chat
  classes in this hook - especially if you want to reference the properties of a framework chat class.</p>
+
 			</header>
 
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:InitializedChatClasses()
 	-- let's say you wanted to reference an existing chat class's color
 	ix.chat.Register("myclass", {
@@ -9260,12 +12262,20 @@ end
 end
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix.chat/#ix.chat.Register">ix.chat.Register</a></li>
+
 						<li><a href="../../libraries/ix.chat/#ix.chat.classes">ix.chat.classes</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="InitializedConfig">
@@ -9274,18 +12284,32 @@ end
 
 
 
+
+
+
 					<p>Called after the config has been initialized.</p>
+
 			</header>
 
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:InitializedConfig()
 	ix.config.Add("myConfig", true, "Whether or not my config is enabled.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="InitializedPlugins">
@@ -9294,18 +12318,32 @@ end
 
 
 
+
+
+
 					<p>Called after all the plugins have been initialized.</p>
+
 			</header>
 
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:InitializedPlugins()
 	print("All plugins have been initialized!")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="InitializedSchema">
@@ -9314,18 +12352,32 @@ end
 
 
 
+
+
+
 					<p>Called after the schema has been initialized.</p>
+
 			</header>
 
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:InitializedSchema()
 	print("The schema has been initialized!")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="InventoryItemAdded">
@@ -9334,52 +12386,98 @@ end
 
 
 
+
+
+
 					<p>Called when an item was added to the inventory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">oldInv</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Previous item inventory</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">inventory</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> New item inventory</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Item that was added to the inventory</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="InventoryItemRemoved">
@@ -9388,40 +12486,76 @@ end
 
 
 
+
+
+
 					<p>Called when an item was removed from the inventory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">inventory</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Inventory from which item was removed</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Item that was removed from the inventory</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="IsCharacterRecognized">
@@ -9430,45 +12564,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">id</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="IsPlayerRecognized">
@@ -9477,20 +12645,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
+
+
 
 
 
@@ -9498,11 +12683,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="IsRecognizedChatType">
@@ -9511,20 +12704,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">chatType</span>
+
+
 
 
 
@@ -9532,11 +12742,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="LoadData">
@@ -9545,18 +12763,32 @@ end
 
 
 
+
+
+
 					<p>Called when server is loading data.</p>
+
 			</header>
 
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:LoadData()
 	print("Loading data...")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="LoadFonts">
@@ -9565,39 +12797,74 @@ end
 
 
 
+
+
+
 					<p>Called when the client is loading fonts.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">font</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Font to load from the config</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">genericFont</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Generic font to load from the config</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:LoadFonts(font, genericFont)
 	surface.CreateFont("ixBigFont", {
 		font = font,
@@ -9608,7 +12875,11 @@ end
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="LoadIntro">
@@ -9617,18 +12888,32 @@ end
 
 
 
+
+
+
 					<p>Called when the client is loading the intro for the first time.</p>
+
 			</header>
 
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:LoadIntro()
 	print("Loading the intro for the first time!")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="MenuSubpanelCreated">
@@ -9637,45 +12922,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">subpanelName</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="MessageReceived">
@@ -9684,45 +13003,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">info</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnAreaChanged">
@@ -9731,45 +13084,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">oldID</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">newID</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnCharacterCreated">
@@ -9778,45 +13165,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnCharacterDisconnect">
@@ -9825,40 +13246,76 @@ end
 
 
 
+
+
+
 					<p>Called when a player who uses a character has disconnected.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> The player that has disconnected</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> The character that the player was using</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnCharacterFallover">
@@ -9867,52 +13324,98 @@ end
 
 
 
+
+
+
 					<p>Called when a character was ragdolled or unragdolled.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that was ragdolled or unradolled</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Ragdoll that represents the player</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bFallenOver</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not the character was ragdolled or unragdolled</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnCharacterGetup">
@@ -9921,40 +13424,76 @@ end
 
 
 
+
+
+
 					<p>Called when a character has gotten up from the ground.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has gotten up</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">ragdoll</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Ragdoll used to represent the player</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnCharacterMenuCreated">
@@ -9963,20 +13502,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
+
+
 
 
 
@@ -9984,11 +13540,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnItemSpawned">
@@ -9997,35 +13561,64 @@ end
 
 
 
+
+
+
 					<p>Called whenever an item entity has spawned in the world.  You can access the entity's item table with
  <code>entity:GetItemTable()</code>.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Spawned item entity</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:OnItemSpawned(entity)
 	local item = entity:GetItemTable()
 	-- do something with the item here
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnItemTransferred">
@@ -10034,57 +13627,106 @@ end
 
 
 
+
+
+
 					<p>Called when an item was transferred from one inventory to another.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/item/#">Item</a></span>
+
+
 
 
 								<p> Item that was transferred</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">curInv</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Current inventory</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">inventory</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Inventory that item was transferred to</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:OnItemTransferred(item, curInv, inventory)
 	print("Item "..item:GetName().." was transferred to "..inventory:GetOwner():Name())
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnLocalVarSet">
@@ -10093,45 +13735,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">var</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnPAC3PartTransferred">
@@ -10140,20 +13816,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">part</span>
+
+
 
 
 
@@ -10161,11 +13854,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnPickupMoney">
@@ -10174,56 +13875,106 @@ end
 
 
 
+
+
+
 					<p>Called when a player has picked up the money from the ground.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that picked up the money</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">self</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Money entity</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to allow the player to pick up the money</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:OnPickupMoney(client, self)
 	return false -- Disallow picking up money.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnPlayerAreaChanged">
@@ -10232,57 +13983,106 @@ end
 
 
 
+
+
+
 					<p>Called when a player moved to a new area.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that moved to a new area</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">oldID</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> ID of the old area</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">newID</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> ID of the new area</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:OnPlayerAreaChanged(client, oldID, newID)
 	client:Notify("You have moved to "..newID..".")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnPlayerObserve">
@@ -10291,45 +14091,84 @@ end
 
 
 
+
+
+
 					<p>Called when a player has entered or exited the observer mode.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that entered or exited the observer mode</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">state</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Previous observer state</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:OnPlayerObserve(client, state)
 	client:Notify(state and "You have entered observer mode." or "You have exited observer mode.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnPlayerOptionSelected">
@@ -10338,52 +14177,98 @@ end
 
 
 
+
+
+
 					<p>Called when a player has selected the entity interaction menu option while interacting with a player.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that other player has interacted with</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">callingClient</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has interacted with with other player</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">option</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Option that was selected</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnPlayerPurchaseDoor">
@@ -10392,69 +14277,128 @@ end
 
 
 
+
+
+
 					<p>Called when a player has purchased or sold a door.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has purchased or sold a door</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Door that was purchased or sold</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bBuying</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not the player is bying a door</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bCallOnDoorChild</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> Function to call something on the door child</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:OnPlayerPurchaseDoor(client, entity, bBuying, bCallOnDoorChild)
 	client:Notify("You have "..(bBuying and "purchased" or "sold").." a door.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnPlayerRestricted">
@@ -10463,33 +14407,62 @@ end
 
 
 
+
+
+
 					<p>Called when a player was restricted.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that was restricted</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:OnPlayerRestricted(client)
 	client:Kick("You have been restricted.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnPlayerUnRestricted">
@@ -10498,33 +14471,62 @@ end
 
 
 
+
+
+
 					<p>Called when a player was unrestricted.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that was unrestricted</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:OnPlayerUnRestricted(client)
 	client:Notify("You have been unrestricted.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnSavedItemLoaded">
@@ -10533,28 +14535,54 @@ end
 
 
 
+
+
+
 					<p>Called when a saved items were loaded.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">loadedItems</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Table of items that were loaded</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnWipeTables">
@@ -10563,13 +14591,24 @@ end
 
 
 
+
+
+
 					<p>Called when server database are being wiped.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerInteractEntity">
@@ -10578,63 +14617,118 @@ end
 
 
 
+
+
+
 					<p>Called when a player has interacted with an entity through the entity's interaction menu.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that performed interaction</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity being interacted with</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">option</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Option selected by the player</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
 
 
+
+
 								<p> Any data passed with the interaction option</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerInteractItem">
@@ -10643,52 +14737,98 @@ end
 
 
 
+
+
+
 					<p>Called when a player has interacted with an item.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that interacted with an item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">action</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Action selected by the player</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Item being interacted with</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerJoinedClass">
@@ -10697,52 +14837,98 @@ end
 
 
 
+
+
+
 					<p>Called when a player has joined a class.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has joined a class</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">class</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Index of the class player has joined to</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">oldClass</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Index of the player's previous class</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerLeaveSequence">
@@ -10751,33 +14937,62 @@ end
 
 
 
+
+
+
 					<p>Called when a player leaves a certain sequence.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has left a sequence</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:PlayerLeaveSequence(client)
 	client:Notify("You have left the sequence.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerLoadedCharacter">
@@ -10786,57 +15001,106 @@ end
 
 
 
+
+
+
 					<p>Called when a player has loaded a character.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has loaded a character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character that was loaded</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">currentChar</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character that player was using</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:PlayerLoadedCharacter(client, character, currentChar)
 	client:Notify("Welcome back, "..character:GetName().."!")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerLockedDoor">
@@ -10845,52 +15109,98 @@ end
 
 
 
+
+
+
 					<p>Called when a player has locked a door.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has locked a door</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">door</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Door that was locked</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">partner</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Door partner</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerLockedVehicle">
@@ -10899,40 +15209,76 @@ end
 
 
 
+
+
+
 					<p>Called when a player has locked a vehicle.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has locked a vehicle</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">vehicle</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Vehicle that was locked</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerMessageSend">
@@ -10941,104 +15287,194 @@ end
 
 
 
+
+
+
 					<p>Called when player has said something in the text chat.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">speaker</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has said something in the text chat</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">chatType</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Type of the chat that player used</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Chat message that player send</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">anonymous</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not message was anonymous</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">receivers</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Players who will hear that message</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">rawText</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Chat message without any formatting</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>You can return text that will be shown instead</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:PlayerMessageSend(speaker, chatType, text, anonymous, receivers, rawText)
  return "Text" -- When a player writes something into chat, he will say "Text" instead.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerModelChanged">
@@ -11047,40 +15483,76 @@ end
 
 
 
+
+
+
 					<p>Called when a player model was changed.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player whose model was changed</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">oldModel</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Old player model</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerStaminaGained">
@@ -11089,28 +15561,54 @@ end
 
 
 
+
+
+
 					<p>Called when a player has got stamina.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player who has got stamina</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerStaminaLost">
@@ -11119,28 +15617,54 @@ end
 
 
 
+
+
+
 					<p>Called when a player has lost stamina.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player who has lost stamina</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerThrowPunch">
@@ -11149,45 +15673,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">trace</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerUnlockedDoor">
@@ -11196,52 +15754,98 @@ end
 
 
 
+
+
+
 					<p>Called when a player has unlocked a door.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has unlocked a door</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">door</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Door that was unlocked</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">partner</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Door partner</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerUnlockedVehicle">
@@ -11250,40 +15854,76 @@ end
 
 
 
+
+
+
 					<p>Called when a player has unlocked a vehicle.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has unlocked a vehicle</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">vehicle</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Vehicle that was unlocked</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerUse">
@@ -11292,40 +15932,76 @@ end
 
 
 
+
+
+
 					<p>Called when a player has used an entity.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player who has used an entity</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity that was used by the player</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerUseDoor">
@@ -11334,40 +16010,76 @@ end
 
 
 
+
+
+
 					<p>Called when a player has used a door.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player who has used a door</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Door that was used by the player</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PlayerWeaponChanged">
@@ -11376,45 +16088,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">weapon</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PluginLoaded">
@@ -11423,45 +16169,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">pluginTable</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PluginShouldLoad">
@@ -11470,20 +16250,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
+
+
 
 
 
@@ -11491,11 +16288,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PluginUnloaded">
@@ -11504,20 +16309,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
+
+
 
 
 
@@ -11525,11 +16347,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PopulateCharacterInfo">
@@ -11538,58 +16368,101 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">tooltip</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PopulateEntityInfo">
@@ -11598,45 +16471,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">tooltip</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PopulateHelpMenu">
@@ -11645,20 +16552,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">categories</span>
+
+
 
 
 
@@ -11666,11 +16590,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PopulateImportantCharacterInfo">
@@ -11679,58 +16611,101 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">tooltip</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PopulateItemTooltip">
@@ -11739,45 +16714,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">tooltip</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PopulatePlayerTooltip">
@@ -11786,45 +16795,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">tooltip</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PopulateScoreboardPlayerMenu">
@@ -11833,45 +16876,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">menu</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostChatboxDraw">
@@ -11880,58 +16957,101 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">alpha</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostDrawHelixModelView">
@@ -11940,45 +17060,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostDrawInventory">
@@ -11987,20 +17141,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
+
+
 
 
 
@@ -12008,11 +17179,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostLoadData">
@@ -12021,18 +17200,32 @@ end
 
 
 
+
+
+
 					<p>Called when server data was loaded.</p>
+
 			</header>
 
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:PostLoadData()
 	print("Data has been loaded.")
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostPlayerLoadout">
@@ -12041,35 +17234,64 @@ end
 
 
 
+
+
+
 					<p>Called after player loadout.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:PostPlayerLoadout(client)
 	client:StripWeapon("ix_keys") -- Strip keys from player loadout.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostPlayerSay">
@@ -12078,64 +17300,120 @@ end
 
 
 
+
+
+
 					<p>Called after player has said something in the text chat.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has said something in the text chat</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">chatType</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Type of the chat that player used</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">message</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Chat message that player send</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">anonymous</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not message was anonymous</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostSetupActs">
@@ -12144,16 +17422,27 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PreCharacterDeleted">
@@ -12162,40 +17451,76 @@ end
 
 
 
+
+
+
 					<p>Called before character deletion.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Character owner</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Chraracter that will be deleted</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PrePlayerLoadedCharacter">
@@ -12204,52 +17529,98 @@ end
 
 
 
+
+
+
 					<p>Called before character loading.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that loading a character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character that will be loaded</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">currentChar</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Character that player is using</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PrePlayerMessageSend">
@@ -12258,75 +17629,141 @@ end
 
 
 
+
+
+
 					<p>Called before a message sent by a player is processed to be sent to other players - i.e this is ran as early as possible
  and before things like the auto chat formatting.  Can be used to prevent the message from being sent at all.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player sending the message</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">chatType</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Chat class of the message</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">message</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Contents of the message</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bAnonymous</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not the player is sending the message anonymously</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to prevent the message from being sent</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:PrePlayerMessageSend(client, chatType, message, bAnonymous)
 	if (!client:IsAdmin()) then
 		return false -- only allow admins to talk in chat
@@ -12334,7 +17771,11 @@ end
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SaveData">
@@ -12343,12 +17784,22 @@ end
 
 
 
+
+
+
 					<p>Called when server is saving data.</p>
+
 			</header>
 
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:SaveData()
 	for k, v in player.Iterator() do
 		ix.util.Notify(v, "The server's data has been saved.")
@@ -12356,7 +17807,11 @@ end
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ScreenResolutionChanged">
@@ -12365,45 +17820,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetupActs">
@@ -12412,16 +17901,27 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetupAreaProperties">
@@ -12430,16 +17930,27 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShipmentItemTaken">
@@ -12448,52 +17959,98 @@ end
 
 
 
+
+
+
 					<p>Called when a player has taken a shipment item.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that has taken a shipment item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> UniqueID of the shipment item that was taken</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">amount</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Amount of the items that were taken</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldBarDraw">
@@ -12502,44 +18059,84 @@ end
 
 
 
+
+
+
 					<p>Wether or not a specific bar of the hud should be drawn.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bar</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Bar ID</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the bar should be drawn</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldBarDraw(bar)
 	return bar == "stm" -- Only draw the stamina bar.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldDeleteSavedItems">
@@ -12548,29 +18145,54 @@ end
 
 
 
+
+
+
 					<p>Whether or not the server should delete saved items.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the server should delete saved items</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldDeleteSavedItems()
  return true -- Delete all saved items.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldDisplayArea">
@@ -12579,44 +18201,84 @@ end
 
 
 
+
+
+
 					<p>Whether or not the area should be displayed when entering it.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">newID</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> ID of the new area</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the area should be displayed</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldDisplayArea(newID)
 	return newID == 1 -- Only display area 1.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldDrawCrosshair">
@@ -12625,56 +18287,106 @@ end
 
 
 
+
+
+
 					<p>Whether or not the crosshair should be drawn.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that the crosshair is being drawn for</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">weapon</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Weapon that the crosshair is being drawn for</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the crosshair should be drawn</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldDrawCrosshair(client, weapon)
 	return client:IsAdmin() -- Only draw crosshair for admins.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldDrawItemSize">
@@ -12683,20 +18395,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
+
+
 
 
 
@@ -12704,11 +18433,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldHideBars">
@@ -12717,29 +18454,54 @@ end
 
 
 
+
+
+
 					<p>Wehther or not the hud bars should be hidden.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the hud bars should be hidden</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldHideBars()
 	return true -- Hide all hud bars.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldPermakillCharacter">
@@ -12748,75 +18510,141 @@ end
 
 
 
+
+
+
 					<p>Whether or not a character should be permakilled upon death.  This is only called if the <code>permakill</code> server config is
  enabled.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player to permakill</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/character/#">Character</a></span>
+
+
 
 
 								<p> Player's current character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">inflictor</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity that inflicted the killing blow</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">attacker</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Other player or entity that killed the player</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p><code>false</code> if the player should not be permakilled</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldPermakillCharacter(client, character, inflictor, attacker)
 		if (client:IsAdmin()) then
 			return false -- all non-admin players will have their character permakilled
@@ -12824,7 +18652,11 @@ end
 	end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldPlayerDrowned">
@@ -12833,44 +18665,84 @@ end
 
 
 
+
+
+
 					<p>Whether or not player should drown.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that is underwater</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not player should drown</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldPlayerDrowned(client)
  return false -- Players will not drown.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldRemoveRagdollOnDeath">
@@ -12879,44 +18751,84 @@ end
 
 
 
+
+
+
 					<p>Whether or not remove player ragdoll on death.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that died</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not remove player ragdoll on death</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldRemoveRagdollOnDeath(client)
  return false -- Player ragdolls will not be removed.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldRestoreInventory">
@@ -12925,68 +18837,128 @@ end
 
 
 
+
+
+
 					<p>Whether or not to restore character inventory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">characterID</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> ID of the character</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">inventoryID</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> ID of the inventory</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">inventoryType</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Type of the inventory</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to restore character inventory</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldRestoreInventory(characterID, inventoryID, inventoryType)
  return false -- Character inventories will not be restored.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldShowPlayerOnScoreboard">
@@ -12995,44 +18967,84 @@ end
 
 
 
+
+
+
 					<p>Whether or not to show the player on the scoreboard.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player to show on the scoreboard</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not to show the player on the scoreboard</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldShowPlayerOnScoreboard(client)
  return !client:IsAdmin() -- Admins will not be shown on the scoreboard, but regular players will.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShouldSpawnClientRagdoll">
@@ -13041,44 +19053,84 @@ end
 
 
 
+
+
+
 					<p>Whether or not spawn player ragdoll on death.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player that died</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not spawn player ragdoll on death</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PLUGIN:ShouldSpawnClientRagdoll(client)
  return false -- Player ragdolls will not be spawned.
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ShowEntityMenu">
@@ -13087,20 +19139,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
+
+
 
 
 
@@ -13108,11 +19177,19 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ThirdPersonToggled">
@@ -13121,45 +19198,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">oldValue</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">value</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="UpdateCharacterInfo">
@@ -13168,45 +19279,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="UpdateCharacterInfoCategory">
@@ -13215,45 +19360,79 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="VoiceDistanceChanged">
@@ -13262,28 +19441,54 @@ end
 
 
 
+
+
+
 					<p>Called when the distance on which the voice can be heard was changed.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">newValue</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> New voice distance</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="WeaponCycleSound">
@@ -13292,16 +19497,27 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="WeaponSelectSound">
@@ -13310,20 +19526,37 @@ end
 
 
 
+
+
+
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">weapon</span>
+
+
 
 
 
@@ -13331,11 +19564,20 @@ end
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

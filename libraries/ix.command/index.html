@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5548,7 +5557,9 @@ Up
 <p>Commands can be ran through the chat with slash commands or they can be executed through the console. Commands can be manually
 restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">CAMI</a>-compliant admin mod.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5557,47 +5568,88 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L157">View source &raquo;</a>
 
+
+
 					<p>Creates a new command.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">command</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the command (recommended in UpperCamelCase)</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
+
 									<span class="tag"><a class="type" href="../../libraries/ix.command/#CommandStructure">CommandStructure</a></span>
+
+
 
 
 								<p> Data describing the command</p>
 							</li>
+
 					</ul>
+
+
+
+
+
+
 
 
 
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix.command/#CommandStructure">CommandStructure</a></li>
+
 						<li><a href="../../libraries/ix.command/#CommandArgumentsStructure">CommandArgumentsStructure</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.command.ExtractArgs">
@@ -5605,49 +5657,90 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L337">View source &raquo;</a>
+
+
 
 					<p>Returns a table of arguments from a given string.
  Words separated by spaces will be considered one argument. To have an argument containing multiple words, they must be
  contained within quotation marks.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> String to extract arguments from</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
 
 								<p>Arguments extracted from string</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>PrintTable(ix.command.ExtractArgs("these are \"some arguments\""))
 > 1 = these
 > 2 = are
 > 3 = some arguments
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.command.FindAll">
@@ -5655,82 +5748,153 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L385">View source &raquo;</a>
+
+
 
 					<p>Returns an array of potential commands by unique id.
  When bSorted is true, the commands will be sorted by name. When bReorganize is true, it will move any exact match to the top
  of the array. When bRemoveDupes is true, it will remove any commands that have the same NAME.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">identifier</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Search query</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bSorted</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to sort the commands by name</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bReorganize</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not any exact match will be moved to the top of the array</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bRemoveDupes</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to remove any commands that have the same name</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
 
 								<p>Array of command tables whose name partially or completely matches the search query</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.command.FindPlayer">
@@ -5738,66 +5902,126 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L445">View source &raquo;</a>
+
+
 
 					<p>Attempts to find a player by an identifier.  If unsuccessful, a notice will be displayed to the specified player. The
  search criteria is derived from <a href="../../libraries/ix.util/#ix.util.FindPlayer">ix.util.FindPlayer</a>.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player to give a notification to if the player could not be found</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">name</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Search query</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">player</span>
+
 
 								<p>Player that matches the given search query</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">nil</span>
+
 
 								<p>If a player could not be found</p>
 							</li>
 
+
+
+
 				</ul>
+
+
+
 
 
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix.util/#ix.util.FindPlayer">ix.util.FindPlayer</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.command.HasAccess">
@@ -5805,53 +6029,101 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L313">View source &raquo;</a>
 
+
+
 					<p>Returns true if a player is allowed to run a certain command.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player to check access for</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">command</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the command to check access for</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the player is allowed to run the command</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.command.Parse">
@@ -5859,85 +6131,158 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L538">View source &raquo;</a>
+
+
 
 					<p>Parses a chat string and runs the command if one is found.  Specifically, it checks for commands in a string with the
  format <code>/CommandName some arguments</code></p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player who is executing the command</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Input string to search for the command format</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">realCommand</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> Specific command to check for. If this is specified, it will not try to run any command that's
  found at the beginning - only if it matches <code>realCommand</code></p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">arguments</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> Array of arguments to pass to the command. If not specified, it will try to extract it from the
  string specified in <code>text</code> using <a href="../../libraries/ix.command/#ix.command.ExtractArgs">ix.command.ExtractArgs</a></p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not a command has been found</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.command.Parse(player.GetByID(1), "/roll 10")
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.command.Run">
@@ -5945,58 +6290,108 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L462">View source &raquo;</a>
 
+
+
 					<p>Forces a player to execute a command by name.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player who is executing the command</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">command</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Full name of the command to be executed. This string gets lowered, but it's good practice to stick with
  the exact name of the command</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">arguments</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Array of arguments to be passed to the command</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.command.Run(player.GetByID(1), "Roll", {10})
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.command.Send">
@@ -6004,45 +6399,86 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L608">View source &raquo;</a>
 
+
+
 					<p>Request the server to run a command.  This mimics similar functionality to the client typing <code>/CommandName</code> in the chatbox.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">command</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Unique ID of the command</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">...</span>
 
 
 
+
+
 								<p> Arguments to pass to the command</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.command.Send("roll", 10)
 </code></pre>
 
+
+
+
 		</section>
+
+
 	<h1 class="title">Tables</h1>
+
 
 		<section class="method">
 			<header>
@@ -6051,7 +6487,11 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L75">View source &raquo;</a>
+
+
 
 					<p>Rather than checking the validity for arguments in your command's <code>OnRun</code> function, you can have Helix do it for you to
  reduce the amount of boilerplate code that needs to be written.  This can be done by populating the <code>arguments</code> field.</p>
@@ -6083,12 +6523,20 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
  to be of type <code>number</code>. The <code>damage</code> argument is optional, meaning that the command will still run if the user has not
  specified any value for the damage. In this case, we'll need to check if it was specified by doing a simple
  <code>if (damage) then</code>. The syntax field will be automatically populated with the value <code>&quot;&lt;target: character&gt; [damage: number]&quot;</code>.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CommandStructure">
@@ -6096,22 +6544,41 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_command.lua#L43">View source &raquo;</a>
+
+
 
 					<p>When registering commands with <a href="../../libraries/ix.command/#ix.command.Add">ix.command.Add</a>, you'll need to pass in a valid command structure.  This is simply a table
  with various fields defined to describe the functionality of the command.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Fields</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">OnRun</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> This function is called when the command has passed all the checks and can execute. The first two
@@ -6122,30 +6589,52 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 
 <p> When the arguments field is NOT defined: <code>OnRun(self, client, arguments)</code></p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">description</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">default: &quot;@noDesc&quot;</span>
+
 
 								<p> The help text that appears when the user types in the command. If the string is
  prefixed with <code>&quot;@&quot;</code>, it will use a language phrase.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">argumentNames</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+
+
 									<span class="tag default">default: nil</span>
+
 
 								<p>
 <p> An array of strings corresponding to each argument of the command. This ignores the
@@ -6156,72 +6645,127 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 </code></pre>
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">arguments</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> If this field is defined, then additional checks will be performed to ensure that the
  arguments given to the command are valid. This removes extra boilerplate code since all the passed arguments are guaranteed
  to be valid. See <a href="../../libraries/ix.command/#CommandArgumentsStructure">CommandArgumentsStructure</a> for more information.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">adminOnly</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Provides an additional check to see if the user is an admin before running.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">superAdminOnly</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Provides an additional check to see if the user is a superadmin before running.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">privilege</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">default: nil</span>
+
 
 								<p> Manually specify a privilege name for this command. It will always be prefixed with
  <code>&quot;Helix - &quot;</code>. This is used in the case that you want to group commands under the same privilege, or use a privilege that
  you've already defined (i.e grouping <code>/CharBan</code> and <code>/CharUnban</code> into the <code>Helix - Ban Character</code> privilege).</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">OnCheckAccess</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
 
+
+
 									<span class="tag default">default: nil</span>
+
 
 								<p> This callback checks whether or not the player is allowed to run the command.
  This callback should <strong>NOT</strong> be used in conjunction with <code>adminOnly</code> or <code>superAdminOnly</code>, as populating those
@@ -6230,11 +6774,20 @@ restricted to certain usergroups using a <a href="https://github.com/glua/CAMI">
 
 <p> Keep in mind that this is a <strong>SHARED</strong> callback; the command will not show up the client if the callback returns <code>false</code>.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

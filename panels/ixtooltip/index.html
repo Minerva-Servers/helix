@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5565,7 +5574,9 @@ Up
 </code></pre>
 </p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5574,41 +5585,79 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L230">View source &raquo;</a>
 
+
+
 					<p>Creates a new <a href="../../panels/ixtooltiprow/#">ixTooltipRow</a> panel and adds it to the bottom of this tooltip.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">id</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the new row. This is used to reorder rows if needed</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">panel</span>
+
 
 								<p>Created row</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="AddRowAfter">
@@ -5616,54 +5665,102 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L244">View source &raquo;</a>
+
+
 
 					<p>Creates a new <a href="../../panels/ixtooltiprow/#">ixTooltipRow</a> and adds it after the row with the given <code>id</code>.  The order of the rows is set via
  setting the Z position of the panels, as this is how VGUI handles ordering with docked panels.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">after</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the row to insert after</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">id</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the newly created row</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">panel</span>
+
 
 								<p>Created row</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetCursorPosition">
@@ -5671,32 +5768,60 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L345">View source &raquo;</a>
 
+
+
 					<p>Returns the current position of the mouse cursor on the screen.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>X position of cursor</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Y position of cursor</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetRow">
@@ -5704,49 +5829,96 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L394">View source &raquo;</a>
 
+
+
 					<p>Returns an <a href="../../panels/ixtooltiprow/#">ixTooltipRow</a> corresponding to the given name.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">id</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the row</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">panel</span>
+
 
 								<p>Corresponding row</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">nil</span>
+
 
 								<p>If the row doesn't exist</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="IsMinimal">
@@ -5754,65 +5926,119 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L214">View source &raquo;</a>
 
+
+
 					<p>Whether or not this tooltip should be displayed in a minimal format.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>True if this tooltip should be displayed in a minimal format</p>
 							</li>
 
+
+
+
 				</ul>
+
+
+
 
 
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../panels/ixtooltiprow/#IsMinimal">ixTooltipRow:IsMinimal</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetEntity">
 					<h1><span class="realm client"></span></span>ixTooltip:SetEntity(entity)</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L261">View source &raquo;</a>
 
+
+
 					<p>Sets the entity associated with this tooltip.  Note that this function is not how you get entities to show tooltips.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity to associate with this tooltip</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SizeToContents">
@@ -5820,16 +6046,29 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L405">View source &raquo;</a>
+
+
 
 					<p>Resizes the tooltip to fit all of the child panels.  You should always call this after you are done
  adding all of your rows.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

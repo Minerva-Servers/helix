@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5553,7 +5562,9 @@ since the epoch.</p>
 <p>This library makes use of a third-party date library found at https://github.com/Tieske/date - you can find all documentation
 regarding the <a href="../../libraries/ix.date/">date</a> object and its methods there.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5562,40 +5573,77 @@ regarding the <a href="../../libraries/ix.date/">date</a> object and its methods
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_date.lua#L144">View source &raquo;</a>
 
+
+
 					<p>Returns a date object from a table or serialized date.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">currentDate</span>
 
 
 
+
+
 								<p> Date to construct</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">date</span>
+
 
 								<p>Constructed date object</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.date.Get">
@@ -5603,26 +5651,49 @@ regarding the <a href="../../libraries/ix.date/">date</a> object and its methods
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_date.lua#L117">View source &raquo;</a>
 
+
+
 					<p>Returns the currently set date.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">date</span>
+
 
 								<p>Current in-game date</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.date.GetFormatted">
@@ -5630,54 +5701,103 @@ regarding the <a href="../../libraries/ix.date/">date</a> object and its methods
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_date.lua#L128">View source &raquo;</a>
 
+
+
 					<p>Returns a string formatted version of a date.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">format</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Format string</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">currentDate</span>
 
+
 									<span class="tag"><span class="type">date</span></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> Date to format. If nil, it will use the currently set date</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Formatted date</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.date.GetSerialized">
@@ -5685,175 +5805,311 @@ regarding the <a href="../../libraries/ix.date/">date</a> object and its methods
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_date.lua#L136">View source &raquo;</a>
 
+
+
 					<p>Returns a serialized version of a date.  This is useful when you need to network a date to clients, or save a date to disk.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">currentDate</span>
 
+
 									<span class="tag"><span class="type">date</span></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> Date to serialize. If nil, it will use the currently set date</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
 
 								<p>Serialized date</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.date.Initialize">
 					<h1><span class="realm server"></span></span>ix.date.Initialize()</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_date.lua#L27">View source &raquo;</a>
 
+
+
 					<p>Loads the date from disk.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.date.ResolveOffset">
 					<h1><span class="realm server"></span></span>ix.date.ResolveOffset()</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_date.lua#L52">View source &raquo;</a>
 
+
+
 					<p>Updates the internal in-game date/time representation and resets the offset.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.date.Save">
 					<h1><span class="realm server"></span></span>ix.date.Save()</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_date.lua#L89">View source &raquo;</a>
 
+
+
 					<p>Saves the current in-game date to disk.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.date.Send">
 					<h1><span class="realm server"></span></span>ix.date.Send(client)</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_date.lua#L72">View source &raquo;</a>
 
+
+
 					<p>Sends the current date to a player.  This is done automatically when the player joins the server.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> Player to send the date to, or <code>nil</code> to send to everyone</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.date.UpdateTimescale">
 					<h1><span class="realm server"></span></span>ix.date.UpdateTimescale(secondsPerMinute)</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_date.lua#L63">View source &raquo;</a>
+
+
 
 					<p>Updates the time scale of the in-game date/time.  The time scale is given in seconds per minute (i.e how many real life
  seconds it takes for an in-game minute to pass). You should avoid using this function and use the in-game config menu to
  change the time scale instead.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">secondsPerMinute</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> New time scale</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

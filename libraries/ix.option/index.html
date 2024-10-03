@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5568,7 +5577,9 @@ client, unless <code>hidden</code> returns <code>true</code> when using <a href=
 <p>Note that the labels for each option in the menu will use a language phrase to show the name. For example, if your option is
 named <code>headbob</code>, then you'll need to define a language phrase called <code>optHeadbob</code> that will be used as the option title.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5577,64 +5588,119 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L44">View source &raquo;</a>
 
+
+
 					<p>Creates a client-side configuration option with the given information.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Unique ID for this option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">optionType</span>
 
+
 									<span class="tag"><a class="type" href="../../libraries/ix/#type">ix.type</a></span>
+
+
 
 
 								<p> Type of this option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">default</span>
 
 
 
+
+
 								<p> Default value that this option will have - this can be nil if needed</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
+
 									<span class="tag"><a class="type" href="../../libraries/ix.option/#OptionStructure">OptionStructure</a></span>
+
+
 
 
 								<p> Additional settings for this option</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.option.Add("animationScale", ix.type.number, 1, {
     category = "appearance",
     min = 0.3,
@@ -5643,7 +5709,11 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 })
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.option.AddQuick">
@@ -5651,106 +5721,196 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L124">View source &raquo;</a>
 
+
+
 					<p>Creates a more simple option that doesn't require language phrases.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">name</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">description</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Description of the option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">category</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Category of the option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">optionType</span>
 
+
 									<span class="tag"><a class="type" href="../../libraries/ix/#type">ix.type</a></span>
+
+
 
 
 								<p> Type of the option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">default</span>
 
 
 
+
+
 								<p> Default value of the option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
+
 									<span class="tag"><a class="type" href="../../libraries/ix.option/#OptionStructure">OptionStructure</a></span>
+
+
 
 
 								<p> Additional settings for this option</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Unique ID of the option</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.option.AddQuick("Viewmodel FOV", "The field of view of the viewmodel", "appearance", ix.type.number, 90, {
     min = 60,
     max = 120
 })
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.option.Get">
@@ -5758,60 +5918,116 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L248">View source &raquo;</a>
 
+
+
 					<p>Retrieves an option value for the local player.  If it is not set, it'll return the default that you've specified.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Unique ID of the option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">default</span>
 
 
 
+
+
 								<p> Default value to return if the option is not set</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="tag type">any</span>
+
 
 								<p>Value associated with the key</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="tag type">any</span>
+
 
 								<p>The given default if the option is not set</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.option.Get">
@@ -5819,73 +6035,139 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L308">View source &raquo;</a>
+
+
 
 					<p>Retrieves an option value from the specified player.  If it is not set, it'll return the default that you've specified.
  This function will error when an invalid player is passed.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player to retrieve option value from</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Unique ID of the option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">default</span>
 
 
 
+
+
 								<p> Default value to return if the option is not set</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="tag type">any</span>
+
 
 								<p>Value associated with the key</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="tag type">any</span>
+
 
 								<p>The given default if the option is not set</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.option.GetAll">
@@ -5893,25 +6175,47 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L169">View source &raquo;</a>
 
+
+
 					<p>Returns all of the available options.  Note that this does contain the actual values of the options, just their properties.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
 
 								<p>Table of all options</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>PrintTable(ix.option.GetAll())
 > language:
 >    bNetworked = true
@@ -5920,7 +6224,11 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 -- etc.
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.option.GetAllByCategories">
@@ -5928,42 +6236,80 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L187">View source &raquo;</a>
+
+
 
 					<p>Returns all of the available options grouped by their categories.  The returned table contains category tables, that contain
  all the options in that category as an array (this is so you can sort them if you'd like).</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bRemoveHidden</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Remove entries that are marked as hidden</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
 
 								<p>Table of all options</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>PrintTable(ix.option.GetAllByCategories())
 > general:
 >    1:
@@ -5974,47 +6320,77 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 -- etc.
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.option.Load">
 					<h1><span class="realm shared"></span></span>ix.option.Load()</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L144">View source &raquo;</a>
 
+
+
 					<p>Loads all saved options from disk.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.option.Save">
 					<h1><span class="realm client"></span></span>ix.option.Save()</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L267">View source &raquo;</a>
 
+
+
 					<p>Saves all options to disk.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.option.Set">
@@ -6022,55 +6398,102 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L216">View source &raquo;</a>
+
+
 
 					<p>Sets an option value for the local player.
  This function will error when an invalid key is passed.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Unique ID of the option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">value</span>
 
 
 
+
+
 								<p> New value to assign to the option</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoSave</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to avoid saving</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.option.Sync">
@@ -6078,16 +6501,30 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L273">View source &raquo;</a>
 
+
+
 					<p>Syncs all networked options to the server.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 	<h1 class="title">Tables</h1>
+
 
 		<section class="method">
 			<header>
@@ -6096,125 +6533,222 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_option.lua#L94">View source &raquo;</a>
+
+
 
 					<p>You can specify additional optional arguments for <a href="../../libraries/ix.option/#ix.option.Add">ix.option.Add</a> by passing in a table of specific fields as the fourth
  argument.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Fields</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">phrase</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">default: &quot;opt&quot; .. key</span>
+
 
 								<p> The phrase to use when displaying in the UI. The default value is your option
  key in UpperCamelCase, prefixed with <code>&quot;opt&quot;</code>. For example, if your key is <code>&quot;exampleOption&quot;</code>, the default phrase will be
  <code>&quot;optExampleOption&quot;</code>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">description</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">default: &quot;optd&quot; .. key</span>
+
 
 								<p> The phrase to use in the tooltip when hovered in the UI. The default
  value is your option key in UpperCamelCase, prefixed with <code>&quot;optd&quot;</code>. For example, if your key is <code>&quot;exampleOption&quot;</code>, the
  default phrase will be <code>&quot;optdExampleOption&quot;</code>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">category</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">default: &quot;misc&quot;</span>
+
 
 								<p> The category that this option should reside in. This is purely for
  aesthetic reasons when displaying the options in the options menu. When displayed in the UI, it will take the form of
  <code>L(&quot;category name&quot;)</code>. This means that you must create a language phrase for the category name - otherwise it will only
  show as the exact string you've specified. If no category is set, it will default to <code>&quot;misc&quot;</code>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">min</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
 
+
+
 									<span class="tag default">default: 0</span>
+
 
 								<p> The minimum allowed amount when setting this option. This field is not
  applicable to any type other than <code>ix.type.number</code>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">max</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
 
+
+
 									<span class="tag default">default: 10</span>
+
 
 								<p> The maximum allowed amount when setting this option. This field is not
  applicable to any type other than <code>ix.type.number</code>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">decimals</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
 
+
+
 									<span class="tag default">default: 0</span>
+
 
 								<p> How many decimals to constrain to when using a number type. This field is not
  applicable to any type other than <code>ix.type.number</code>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNetworked</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not the server should be aware of this option for each client.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">OnChanged</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p>
 <p> The function to run when this option is changed - this includes whether it was set
@@ -6225,29 +6759,51 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 </code></pre>
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">hidden</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> The function to check whether the option should be hidden from the options menu.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">populate</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p>
 <p> The function to run when the option needs to be added to the menu. This is a required
@@ -6264,11 +6820,20 @@ named <code>headbob</code>, then you'll need to define a language phrase called 
 </code></pre>
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

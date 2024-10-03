@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5598,7 +5607,9 @@ in your item class file with the same name. See the <code>bags</code> base for e
 <p>Icons for items sometimes don't line up quite right, in which case you can modify an item's <code>iconCam</code> value and line up the
 rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">ItemIconStructure</a> for more details.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5607,76 +5618,143 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L277">View source &raquo;</a>
 
+
+
 					<p>Calls one of the item's methods.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">method</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The method to be called</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> The client to pass when calling the method, if applicable</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> The eneity to pass when calling the method, if applicable</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">...</span>
 
 
 
+
+
 								<p> Arguments to pass to the method</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="tag type">any</span>
+
 
 								<p>The values returned by the method</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetCharacterID">
@@ -5684,26 +5762,49 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L238">View source &raquo;</a>
 
+
+
 					<p>Returns the ID of the owning character, if one exists.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The owning character's ID</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetData">
@@ -5711,53 +5812,101 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L363">View source &raquo;</a>
 
+
+
 					<p>Returns the value stored on a key within the item's data.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The key in which the value is stored</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">default</span>
 
 
+
+
 									<span class="tag default">default: nil</span>
+
 
 								<p> The value to return in case there is no value stored in the key</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="tag type">any</span>
+
 
 								<p>The value stored within the key</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetDescription">
@@ -5765,26 +5914,49 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L211">View source &raquo;</a>
 
+
+
 					<p>Returns the description of the item.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>The description of the item</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetEntity">
@@ -5792,26 +5964,49 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L506">View source &raquo;</a>
 
+
+
 					<p>Returns the item's entity.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">entity</span>
+
 
 								<p>The entity of the item</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetID">
@@ -5819,26 +6014,49 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L197">View source &raquo;</a>
 
+
+
 					<p>Returns this item's database ID.  This is guaranteed to be unique.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Unique ID of item</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetModel">
@@ -5846,26 +6064,49 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L220">View source &raquo;</a>
 
+
+
 					<p>Returns the model of the item.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>The model of the item</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetName">
@@ -5873,26 +6114,49 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L204">View source &raquo;</a>
 
+
+
 					<p>Returns the name of the item.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>The name of the item</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetOwner">
@@ -5900,26 +6164,49 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L299">View source &raquo;</a>
 
+
+
 					<p>Returns the player that owns this item.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">player</span>
+
 
 								<p>Player owning this item</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetPlayerID">
@@ -5927,26 +6214,49 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L245">View source &raquo;</a>
 
+
+
 					<p>Returns the SteamID64 of the owning player, if one exists.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The owning player's SteamID64</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetSkin">
@@ -5954,26 +6264,49 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L227">View source &raquo;</a>
 
+
+
 					<p>Returns the skin of the item.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The skin of the item</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Hook">
@@ -5981,42 +6314,79 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L398">View source &raquo;</a>
 
+
+
 					<p>Changes the function called on specific events for the item.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">name</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The name of the hook</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">func</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> The function to call once the event occurs</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PostHook">
@@ -6024,42 +6394,79 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L408">View source &raquo;</a>
 
+
+
 					<p>Changes the function called after hooks for specific events for the item.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">name</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The name of the hook</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">func</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> The function to call after the original hook was called</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Print">
@@ -6067,31 +6474,59 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L252">View source &raquo;</a>
 
+
+
 					<p>A utility function which prints the item's details.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">detail</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether additional detail should be printed or not(Owner, X position, Y position)</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PrintData">
@@ -6099,15 +6534,27 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L262">View source &raquo;</a>
 
+
+
 					<p>A utility function printing the item's stored data.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Remove">
@@ -6115,53 +6562,101 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L419">View source &raquo;</a>
 
+
+
 					<p>Removes the item.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoReplication</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not the item's removal should not be replicated.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoDelete</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not the item should not be fully deleted</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether the item was successfully deleted or not</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetData">
@@ -6169,81 +6664,151 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L325">View source &raquo;</a>
 
+
+
 					<p>Sets a key within the item's data.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The key to store the value within</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">value</span>
 
 
+
+
 									<span class="tag default">default: nil</span>
+
 
 								<p> The value to store within the key</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">receivers</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> The players to replicate the data on</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">noSave</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether to disable saving the data on the database or not</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">noCheckEntity</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether to disable setting the data on the entity, if applicable</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Spawn">
@@ -6251,53 +6816,101 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L521">View source &raquo;</a>
 
+
+
 					<p>Spawn an item entity based off the item table.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">position</span>
 
+
 									<span class="tag"><span class="type">vector</span></span>
+
+
 
 
 								<p> The position in which the item's entity will be spawned</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">angles</span>
 
+
 									<span class="tag"><span class="type">angle</span></span>
+
+
 
 
 								<p> The angles at which the item's entity will spawn</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">entity</span>
+
 
 								<p>The spawned entity</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Transfer">
@@ -6305,107 +6918,200 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L562">View source &raquo;</a>
 
+
+
 					<p>Transfers an item to a specific inventory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">invID</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The inventory to transfer the item to</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">x</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The X position to which the item should be transferred on the new inventory</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">y</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The Y position to which the item should be transferred on the new inventory</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> The player to which the item is being transferred</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">noReplication</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether there should be no replication of the transferral</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">isLogical</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not an entity should spawn if the item is transferred to the world</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether the transfer was successful or not</p>
 							</li>
 
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>The error, if applicable</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="__eq">
@@ -6413,45 +7119,86 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L190">View source &raquo;</a>
 
+
+
 					<p>Returns true if this item is equal to another item.  Internally, this checks item IDs.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">other</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/item/#">Item</a></span>
+
+
 
 
 								<p> Item to compare to</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not this item is equal to the given item</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.item.instances[1] == ix.item.instances[2])
  > false
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="__tostring">
@@ -6459,31 +7206,59 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L180">View source &raquo;</a>
 
+
+
 					<p>Returns a string representation of this item.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>String representation</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.item.instances[1])
  > "item[1]"
 </code></pre>
 
+
+
+
 		</section>
+
+
 	<h1 class="title">Tables</h1>
+
 
 		<section class="method">
 			<header>
@@ -6492,7 +7267,11 @@ rendered model as needed. See <a href="../../classes/item/#ItemIconStructure">It
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L114">View source &raquo;</a>
+
+
 
 					<p>
 <p>All item functions live inside of an item's <code>functions</code> table.  An item function entry includes a few methods and fields you can
@@ -6526,58 +7305,106 @@ ITEM.functions.MyFunction = {
 }
 </code></pre>
 </p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Fields</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">name</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> Language phrase to use when displaying this item function's name in the UI. If not specified,
  then it will use the unique ID of the item function</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">tip</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> Language phrase to use when displaying this item function's detailed description in the UI</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">icon</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> Path to the material to use when displaying this item function's icon</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">OnRun</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> Function to call when the item function is ran. This function is <strong>ONLY</strong> ran on the server.</p>
@@ -6589,14 +7416,24 @@ ITEM.functions.MyFunction = {
 <p> The item will be removed after the item function is ran. If you want to prevent this behaviour, then you can return <code>false</code>
  in this function. See the example above.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">OnCanRun</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> Function to call when checking whether or not this item function can be ran. This function is
@@ -6606,27 +7443,46 @@ ITEM.functions.MyFunction = {
  Returning <code>true</code> will allow the item function to be ran. Returning <code>false</code> will prevent it from running and additionally
  hide it from the UI. See the example above.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">OnClick</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> This function is called when the player clicks on this item function's entry in the UI.
  This function is ran <strong>ONLY</strong> on the client, and is only ran if <code>OnCanRun</code> succeeds.</p>
 
 <p> The same arguments from <code>OnCanRun</code> and <code>OnRun</code> apply to this function.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ItemIconStructure">
@@ -6634,7 +7490,11 @@ ITEM.functions.MyFunction = {
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L134">View source &raquo;</a>
+
+
 
 					<p>Changing the way an item's icon is rendered is done by modifying the location and angle of the model, as well as the FOV of the
 camera.  You can tweak the values in code, or use the <code>ix_dev_icon</code> console command to visually position the model and camera. An
@@ -6649,51 +7509,94 @@ example entry for an item's icon is below:</p>
 
 <p>Note that this will probably not work for your item's specific model, since every model has a different size, origin, etc. All
 item icons need to be tweaked individually.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Fields</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">pos</span>
 
+
 									<span class="tag"><span class="type">vector</span></span>
+
+
 
 
 								<p> Location of the model relative to the camera. +X is forward, +Z is up</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">ang</span>
 
+
 									<span class="tag"><span class="type">angle</span></span>
+
+
 
 
 								<p> Angle of the model</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">fov</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> FOV of the camera</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ItemStructure">
@@ -6701,7 +7604,11 @@ item icons need to be tweaked individually.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_item.lua#L168">View source &raquo;</a>
+
+
 
 					<p>When creating an item class, the file will have a global table <code>ITEM</code> set that you use to define the item's values/methods.  An
 example item class is below:</p>
@@ -6717,184 +7624,338 @@ ITEM.price = 25
 
 <p>Note that the below list only includes the default fields available for <em>all</em> items, and not special ones defined in custom
 item bases.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Fields</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">name</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Display name of the item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">description</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Detailed description of the item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">model</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Model to use for the item's icon and when it's dropped in the world</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 1</span>
 
+
 								<p> Width of the item in grid cells</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 1</span>
 
+
 								<p> Height of the item in grid cells</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">price</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 0</span>
 
+
 								<p> How much money it costs to purchase this item in the business menu</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">category</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> Name of the category this item belongs to - mainly used for the business menu</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">noBusiness</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to disallow purchasing this item in the business menu</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">factions</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> List of factions allowed to purchase this item in the business menu</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">classes</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> List of character classes allowed to purchase this item in the business menu. Classes are
  checked after factions, so the character must also be in an allowed faction</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">flag</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> List of flags (as a string - e.g <code>&quot;a&quot;</code> or <code>&quot;abc&quot;</code>) allowed to purchase this item in the
  business menu. Flags are checked last, so the character must also be in an allowed faction and class</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">iconCam</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/item/#ItemIconStructure">ItemIconStructure</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> How to render this item's icon</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">functions</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> List of all item functions that this item has. See <a href="../../classes/item/#ItemFunctionStructure">ItemFunctionStructure</a> on how to define
  new item functions</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

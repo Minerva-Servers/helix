@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5548,7 +5557,9 @@ Up
 <p>The <a href="../../libraries/ix.menu/">menu</a> library allows you to open up a context menu of arbitrary options whose callbacks will be ran when they are selected
 from the panel that shows up for the player.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5557,26 +5568,49 @@ from the panel that shows up for the player.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_menu.lua#L49">View source &raquo;</a>
 
+
+
 					<p>Checks whether or not an entity menu is currently open.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">boolean</span>
+
 
 								<p>Whether or not an entity menu is open</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.menu.NetworkChoice">
@@ -5584,53 +5618,99 @@ from the panel that shows up for the player.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_menu.lua#L58">View source &raquo;</a>
 
+
+
 					<p>Notifies the server of an option that was chosen for the given entity.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity to call option on</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">choice</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Option that was chosen</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
 
 
+
+
 								<p> Extra data to send to the entity</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.menu.Open">
@@ -5638,55 +5718,106 @@ from the panel that shows up for the player.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_menu.lua#L34">View source &raquo;</a>
 
+
+
 					<p>Opens up a context menu for the given entity.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">options</span>
 
+
 									<span class="tag"><a class="type" href="../../libraries/ix.menu/#MenuOptionsStructure">MenuOptionsStructure</a></span>
+
+
 
 
 								<p> Data describing what options to display</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> Entity to send commands to</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">boolean</span>
+
 
 								<p>Whether or not the menu opened successfully. It will fail when there is already a menu open.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
+
 	<h1 class="title">Tables</h1>
+
 
 		<section class="method">
 			<header>
@@ -5695,7 +5826,11 @@ from the panel that shows up for the player.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_menu.lua#L26">View source &raquo;</a>
+
+
 
 					<p>You'll need to pass a table of options to <a href="../../libraries/ix.menu/#ix.menu.Open">ix.menu.Open</a> to populate the menu.  This table consists of strings as its keys
  and functions as its values. These correspond to the text displayed in the menu and the callback to run, respectively.</p>
@@ -5711,12 +5846,21 @@ from the panel that shows up for the player.</p>
  }, ents.GetByIndex(1))
 </code></pre>
 <p> This opens a menu with the options <code>&quot;Drink&quot;</code> and <code>&quot;Take&quot;</code> which will print a message when you click on either of the options.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

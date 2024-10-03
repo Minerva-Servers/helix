@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5550,7 +5559,9 @@ object at a time that you can interface with.</p>
 
 <p>See the <a href="https://wiki.garrysmod.com/page/Category:Player">Garry's Mod Wiki</a> for all other methods that the <a href="../../classes/player/#">Player</a> class has.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5559,26 +5570,49 @@ object at a time that you can interface with.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L47">View source &raquo;</a>
 
+
+
 					<p>Returns <code>true</code> if the player is able to shoot their weapon.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the player can shoot their weapon</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ChatNotify">
@@ -5586,30 +5620,57 @@ object at a time that you can interface with.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_notice.lua#L68">View source &raquo;</a>
 
+
+
 					<p>Displays a notification for this player in the chatbox.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">message</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to display in the notification</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ChatNotifyLocalized">
@@ -5617,45 +5678,84 @@ object at a time that you can interface with.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_notice.lua#L81">View source &raquo;</a>
 
+
+
 					<p>Displays a notification for this player in the chatbox with the given language phrase.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">message</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> ID of the phrase to display to the player</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">...</span>
 
 
 
+
+
 								<p> Arguments to pass to the phrase</p>
 							</li>
+
 					</ul>
+
+
+
+
+
+
 
 
 
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../classes/player/#NotifyLocalized">NotifyLocalized</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CreateServerRagdoll">
@@ -5663,43 +5763,82 @@ object at a time that you can interface with.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L392">View source &raquo;</a>
+
+
 
 					<p>Creates a ragdoll entity of this player that will be synced with clients.  This does <strong>not</strong> affect the player like
  <a href="../../classes/player/#SetRagdolled">SetRagdolled</a> does.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bDontSetPlayer</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to avoid setting the ragdoll's owning player</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">entity</span>
+
 
 								<p>Created ragdoll entity</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="DoStaredAction">
@@ -5707,81 +5846,149 @@ object at a time that you can interface with.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L132">View source &raquo;</a>
+
+
 
 					<p>Performs a time-delay action that requires this player to look at an entity.  If this player looks away from the entity
  before the action timer completes, the action is cancelled. This is usually used in conjunction with <a href="../../classes/player/#SetAction">SetAction</a> to display
  progress to the player.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> that this player must look at</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">callback</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> Function to call when the timer completes</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">time</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> How much time in seconds this player must look at the entity for</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">onCancel</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> Function to call when the timer has been cancelled</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">distance</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 96</span>
 
+
 								<p> Maximum distance a player can move away from the entity before the action is cancelled</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>client:SetAction("Searching...", 4) -- for displaying the progress bar
 client:DoStaredAction(entity, function()
     print("hello!")
@@ -5789,11 +5996,18 @@ end)
 -- prints "hello!" after looking at the entity for 4 seconds
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../classes/player/#SetAction">SetAction</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ForceSequence">
@@ -5801,101 +6015,186 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_anims.lua#L511">View source &raquo;</a>
+
+
 
 					<p>Forces this player's model to play an animation sequence.  It also prevents the player from firing their weapon while the
  animation is playing.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">sequence</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the animation sequence to play</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">callback</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
 
+
+
 									<span class="tag default">default: nil</span>
+
 
 								<p> Function to call when the animation finishes. This is also called immediately if the animation
  fails to play</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">time</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> How long to play the animation for. This defaults to the duration of the animation</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoFreeze</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to avoid freezing this player in place while the animation is playing</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">loop</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to have the animation loop. This does nothing if time is not set to greater than the duration of the animation</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">speed</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 1</span>
 
+
 								<p> The speed at which the animation should play</p>
 							</li>
+
 					</ul>
+
+
+
+
+
+
 
 
 
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../classes/player/#LeaveSequence">LeaveSequence</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetCharacter">
@@ -5903,34 +6202,66 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_character.lua#L1214">View source &raquo;</a>
 
+
+
 					<p>Returns this player's currently possessed <a href="../../classes/character/#">Character</a> object if it exists.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/character/#">Character</a>
+
 
 								<p>Currently loaded character</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">nil</span>
+
 
 								<p>If this player has no character loaded</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetItemDropPos">
@@ -5938,45 +6269,86 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L89">View source &raquo;</a>
 
+
+
 					<p>Returns a good position in front of the player for an entity to be placed.  This is usually used for item entities.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity to get a position for</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">vector</span>
+
 
 								<p>Best guess for a good drop position in front of the player</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>local position = client:GetItemDropPos(entity)
  entity:SetPos(position)
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetLocalVar">
@@ -5984,61 +6356,114 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sv_networking.lua#L101">View source &raquo;</a>
+
+
 
 					<p>Retrieves a local networked variable.  If it is not set, it'll return the default that you've specified.
  Locally networked variables can only be retrieved from the owning player when used from the client.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Identifier of the local variable</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">default</span>
 
 
 
+
+
 								<p> Default value to return if the local variable is not set</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="tag type">any</span>
+
 
 								<p>Value associated with the key, or the default that was given if it doesn't exist</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(client:GetLocalVar("secret"))
  > 12345678
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../classes/player/#SetLocalVar">SetLocalVar</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetName">
@@ -6046,34 +6471,66 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_character.lua#L1224">View source &raquo;</a>
 
+
+
 					<p>Returns this player's current name.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Name of this player's currently loaded character</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Steam name of this player if the player has no character loaded</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetPlayTime">
@@ -6081,26 +6538,49 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L18">View source &raquo;</a>
 
+
+
 					<p>Returns the amount of time the player has played on the server.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Number of seconds the player has played on the server</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="IsFemale">
@@ -6108,27 +6588,50 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L65">View source &raquo;</a>
+
+
 
 					<p>Returns <code>true</code> if the player currently has a female model.  This checks if the model has <code>female</code>, <code>alyx</code> or <code>mossman</code> in its
  name, or if the player's model class is <code>citizen_female</code>.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the player has a female model</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="IsRestricted">
@@ -6136,27 +6639,50 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L40">View source &raquo;</a>
+
+
 
 					<p>Returns <code>true</code> if the player is restricted - that is to say that they are considered "bound" and cannot interact with
  objects normally (e.g hold weapons, use items, etc).  An example of this would be a player in handcuffs.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the player is restricted</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="IsRunning">
@@ -6164,27 +6690,50 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L57">View source &raquo;</a>
+
+
 
 					<p>Returns <code>true</code> if the player is running.  Running in this case means that their current speed is greater than their
  regularly set walk speed.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the player is running</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="IsStuck">
@@ -6192,26 +6741,49 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L75">View source &raquo;</a>
 
+
+
 					<p>Whether or not this player is stuck and cannot move.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not this player is stuck</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="IsWepRaised">
@@ -6219,26 +6791,49 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L32">View source &raquo;</a>
 
+
+
 					<p>Returns <code>true</code> if the player has their weapon raised.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the player has their weapon raised</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="LeaveSequence">
@@ -6246,15 +6841,27 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_anims.lua#L564">View source &raquo;</a>
 
+
+
 					<p>Forcefully stops this player's model from playing an animation that was started by <a href="../../classes/player/#ForceSequence">ForceSequence</a>.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Notify">
@@ -6262,30 +6869,57 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_notice.lua#L50">View source &raquo;</a>
 
+
+
 					<p>Displays a prominent notification in the top-right of this player's screen.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">message</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to display in the notification</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="NotifyLocalized">
@@ -6293,49 +6927,91 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_notice.lua#L61">View source &raquo;</a>
 
+
+
 					<p>Displays a notification for this player with the given language phrase.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">message</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> ID of the phrase to display to the player</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">...</span>
 
 
 
+
+
 								<p> Arguments to pass to the phrase</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>client:NotifyLocalized("mapRestarting", 10)
  -- displays "The map will restart in 10 seconds!" if the player's language is set to English
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix.lang/#">ix.lang</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PerformInteraction">
@@ -6343,56 +7019,103 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L232">View source &raquo;</a>
+
+
 
 					<p>Performs a delayed action that requires this player to hold use on an entity.  This is displayed to this player as a
  closing ring over their crosshair.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">time</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> How much time in seconds this player has to hold use for</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity that this player must be looking at</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">callback</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> Function to run when the timer completes. It will be ran right away if <code>time</code> is <code>0</code>. Returning <code>false</code> in
  the callback will not mark this interaction as dirty if you're managing the interaction state manually.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="RequestString">
@@ -6400,74 +7123,135 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L330">View source &raquo;</a>
+
+
 
 					<p>Opens up a text box on this player's screen for input and returns the result.  Remember to sanitize the user's input if
  it's needed!</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">title</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Title to display on the panel</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">subTitle</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Subtitle to display on the panel</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">callback</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> Function to run when this player enters their input. Callback is ran with the user's input string.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">default</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> Default value to put in the text box.</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>client:RequestString("Hello", "Please enter your name", function(text)
     client:ChatPrint("Hello, " .. text)
 end)
 -- prints "Hello, <text>" in the player's chat
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ResetBodygroups">
@@ -6475,15 +7259,27 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L163">View source &raquo;</a>
 
+
+
 					<p>Resets all bodygroups this player's model has to their defaults (<code>0</code>).</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetAction">
@@ -6491,83 +7287,153 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L273">View source &raquo;</a>
 
+
+
 					<p>Displays a progress bar for this player that takes the given amount of time to complete.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to display above the progress bar</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">time</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 5</span>
 
+
 								<p> How much time in seconds to wait before the timer completes</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">callback</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> Function to run once the timer completes</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">startTime</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
 
+
+
 									<span class="tag default">default: CurTime()</span>
+
 
 								<p> Game time in seconds that the timer started. If you are using <code>time</code>, then you shouldn't
  use this argument</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">finishTime</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
 
+
+
 									<span class="tag default">default: startTime + time</span>
+
 
 								<p> Game time in seconds that the timer should complete at. If you are using <code>time</code>,
  then you shouldn't use this argument</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetLocalVar">
@@ -6575,48 +7441,90 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sv_networking.lua#L115">View source &raquo;</a>
 
+
+
 					<p>Sets the value of a local networked variable.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">key</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Identifier of the local variable</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">value</span>
 
 
 
+
+
 								<p> New value to assign to the local variable</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>client:SetLocalVar("secret", 12345678)
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../classes/player/#GetLocalVar">GetLocalVar</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetRagdolled">
@@ -6624,58 +7532,107 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L450">View source &raquo;</a>
 
+
+
 					<p>Sets this player's ragdoll status.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bState</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to ragdoll this player</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">time</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
 
+
+
 									<span class="tag default">default: 0</span>
+
 
 								<p> How long this player should stay ragdolled for. Set to <code>0</code> if they should stay ragdolled until they
  get back up manually</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">getUpGrace</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
 
+
+
 									<span class="tag default">default: 5</span>
+
 
 								<p> How much time in seconds to wait before the player is able to get back up manually. Set to
  the same number as <code>time</code> to disable getting up manually entirely</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetRestricted">
@@ -6683,42 +7640,79 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L352">View source &raquo;</a>
 
+
+
 					<p>Sets this player's restricted status.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bState</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to restrict this player</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoMessage</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to suppress the restriction notification</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetWepRaised">
@@ -6726,64 +7720,115 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L179">View source &raquo;</a>
 
+
+
 					<p>Sets whether or not this player's current weapon is raised.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bState</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not the raise the weapon</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">weapon</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
 
+
+
 									<span class="tag default">default: GetActiveWeapon()</span>
+
 
 								<p> Weapon to raise or lower. You should pass this argument if you already have a
  reference to this player's current weapon to avoid an expensive lookup for this player's current weapon.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SyncVars">
 					<h1><span class="realm server"></span></span>Player:SyncVars()</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sv_networking.lua#L62">View source &raquo;</a>
 
+
+
 					<p>Synchronizes networked variables to the client.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ToggleWepRaised">
@@ -6791,16 +7836,29 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_player.lua#L207">View source &raquo;</a>
+
+
 
 					<p>Inverts this player's weapon raised state.  You should use <a href="../../classes/player/#SetWepRaised">SetWepRaised</a> instead of this if you already have a reference
  to this player's current weapon.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

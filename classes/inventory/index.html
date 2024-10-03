@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5565,7 +5574,9 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 
 <p><a href="../../classes/inventory/#HasItem">HasItem</a> Which checks if the inventory has an item.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5574,130 +5585,245 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L809">View source &raquo;</a>
 
+
+
 					<p>Add an item to the inventory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
 
 
 
+
+
 								<p> The item unique ID (e.g <code>&quot;handheld_radio&quot;</code>) or instance ID (e.g <code>1024</code>) to add to the inventory</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">quantity</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 1</span>
 
+
 								<p> The quantity of the item to add</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Item data to add to the item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">x</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> The X position for the item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">y</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> The Y position for the item</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">noReplication</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not the item's addition should not be replicated</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether the add was successful or not</p>
 							</li>
 
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>The error, if applicable</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The X position that the item was added to</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The Y position that the item was added to</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The inventory ID that the item was added to</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="AddReceiver">
@@ -5705,7 +5831,11 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L416">View source &raquo;</a>
+
+
 
 					<p>Adds a player as a receiver on this <a href="../../classes/inventory/#">Inventory</a>
  Receivers are players who will be networked the items inside the inventory. </p>
@@ -5714,114 +5844,206 @@ attaches inventories to props, allowing for items to be stored outside of any ch
  All future contents will be synced, but not anything that was not synced before this is called.</p>
 
 <p> This function does not check the validity of <code>client</code>, therefore if <code>client</code> doesn't exist, it will error.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> The player to add as a receiver.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="CanItemFit">
 					<h1><span class="realm shared"></span></span>Inventory:CanItemFit(x, y, w, h, item2)</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L220">View source &raquo;</a>
+
+
 
 					<p>Checks whether or not an <a href="../../classes/item/#">Item</a> can fit into the <a href="../../classes/inventory/#">Inventory</a> starting from <code>x</code> and <code>y</code>.
  Internally used by FindEmptySlot, in most cases you are better off using that.
  This function will search if all of the slots within <code>x + width</code> and <code>y + width</code> are empty,
  ignoring any space the <a href="../../classes/item/#">Item</a> itself already occupies.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">x</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The beginning x coordinate to search for.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">y</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The beginning y coordiate to search for.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">w</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The <a href="../../classes/item/#">Item</a>'s width.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">h</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The <a href="../../classes/item/#">Item</a>'s height.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item2</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/item/#">Item</a></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> An <a href="../../classes/item/#">Item</a>, if any, to ignore when searching.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="FindEmptySlot">
@@ -5829,7 +6051,11 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L300">View source &raquo;</a>
+
+
 
 					<p>Finds an empty slot of a specified width and height.
  In most cases, to check if an <a href="../../classes/item/#">Item</a> can actually fit in the <a href="../../classes/inventory/#">Inventory</a>,
@@ -5839,92 +6065,173 @@ attaches inventories to props, allowing for items to be stored outside of any ch
  which you specify an <code>x</code> and <code>y</code> for.
  this will call CanItemFit anyway.
  If you need to check if an item will fit <em>exactly</em> at a position, you want CanItemFit instead.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">w</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The width of the <a href="../../classes/item/#">Item</a> you are trying to fit.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">h</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The height of the <a href="../../classes/item/#">Item</a> you are trying to fit.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">onlyMain</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to search any bags connected to this <a href="../../classes/inventory/#">Inventory</a></p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>x The <code>x</code> coordinate that the <a href="../../classes/item/#">Item</a> can fit into.</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>y The <code>y</code> coordinate that the <a href="../../classes/item/#">Item</a> can fit into.</p>
 							</li>
+
+
 
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>x The <code>x</code> coordinate that the <a href="../../classes/item/#">Item</a> can fit into.</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>y The <code>y</code> coordinate that the <a href="../../classes/item/#">Item</a> can fit into.</p>
 							</li>
 
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/inventory/#">Inventory</a>
+
 
 								<p>bagInv If the item was in a bag, it will return the inventory it was in.</p>
 							</li>
 
+
+
+
 				</ul>
+
+
+
 
 
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../classes/inventory/#CanItemFit">CanItemFit</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="FindError">
@@ -5932,18 +6239,30 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L104">View source &raquo;</a>
+
+
 
 					<p>Searches the inventory to find any stacked items.
  A common problem with developing, is that items will sometimes error out, or get corrupt.
  Sometimes, the server knows things you don't while developing live
  This function can be helpful for getting rid of those pesky errors.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetFilledSlotCount">
@@ -5951,26 +6270,49 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L251">View source &raquo;</a>
 
+
+
 					<p>Returns the amount of slots currently filled in the Inventory.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The amount of slots currently filled.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetFreeSlotCount">
@@ -5978,26 +6320,49 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L268">View source &raquo;</a>
 
+
+
 					<p>Returns the amount of slots currently free in the Inventory.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The amount of slots currently free.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetID">
@@ -6005,26 +6370,49 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L63">View source &raquo;</a>
 
+
+
 					<p>Returns this inventory's database ID.  This is guaranteed to be unique.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Unique ID of inventory</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetItemAt">
@@ -6032,60 +6420,113 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L342">View source &raquo;</a>
+
+
 
 					<p>Returns the item that currently exists within <code>x</code> and <code>y</code> in the <a href="../../classes/inventory/#">Inventory</a>.
  Items that have a width or height greater than 0 occupy more than 1 x and y.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">x</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The <code>x</code> coordindate to search in.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">y</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The <code>y</code> coordinate to search in.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>x The <code>x</code> coordinate that the <a href="../../classes/item/#">Item</a> is located at.</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>y The <code>y</code> coordinate that the <a href="../../classes/item/#">Item</a> is located at.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetItemByID">
@@ -6093,53 +6534,101 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L513">View source &raquo;</a>
 
+
+
 					<p>Get an item by it's specific Database ID.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">id</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The ID to search for.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">onlyMain</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to exclude bags that are present from the search.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">item</span>
+
 
 								<p>The item if it exists.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetItemCount">
@@ -6147,52 +6636,99 @@ attaches inventories to props, allowing for items to be stored outside of any ch
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L462">View source &raquo;</a>
 
+
+
 					<p>Returns a count of a <em>specific</em> <a href="../../classes/item/#">Item</a>s in the <a href="../../classes/inventory/#">Inventory</a></p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The Unique ID of the item.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">onlyMain</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to exclude bags that are present from the search.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The amount of <a href="../../classes/item/#">Item</a>s this inventory has.</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>local curHighest, winner = 0, false
 for client, character in ix.util.GetCharacters() do
  local itemCount = character:GetInventory():GetItemCount('water', false)
@@ -6204,7 +6740,11 @@ end
 -- Finds the thirstiest character on the server and returns their Character ID or false if no character has water.
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetItems">
@@ -6212,41 +6752,79 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L548">View source &raquo;</a>
 
+
+
 					<p>Returns a table of all the items that an <a href="../../classes/inventory/#">Inventory</a> has.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">onlyMain</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to exclude bags from this search.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
 
 								<p>The items this <a href="../../classes/inventory/#">Inventory</a> has.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetItemsByBase">
@@ -6254,42 +6832,79 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L496">View source &raquo;</a>
 
+
+
 					<p>Returns a table of <a href="../../classes/item/#">Item</a>s by their base.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">baseID</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The base to search for.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bOnlyMain</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to exclude bags that are present from the search.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetItemsByID">
@@ -6297,57 +6912,105 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L530">View source &raquo;</a>
+
+
 
 					<p>Get a table of <a href="../../classes/item/#">Item</a>s by their specific Database ID.
  It's important to note that while in 99% of cases,
  items will have a unique Database ID, developers or random GMod weirdness could
  cause a second item with the same ID to appear, even though, <code>ix.item.instances</code> will only store one of those.
  The inventory only stores a reference to the <code>ix.item.instance</code> ID, not the memory reference itself.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">id</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The ID to search for.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">onlyMain</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to exclude bags that are present from the search.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">item</span>
+
 
 								<p>The item if it exists.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetItemsByUniqueID">
@@ -6355,54 +7018,102 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L480">View source &raquo;</a>
+
+
 
 					<p>Returns a table of all <a href="../../classes/item/#">Item</a>s in the <a href="../../classes/inventory/#">Inventory</a> by their Unique ID.
  Not to be confused with <a href="../../classes/inventory/#GetItemsByID">GetItemsByID</a> or <a href="../../classes/inventory/#GetItemByID">GetItemByID</a> which take in an Item Instance's ID instead.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">uniqueID</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The Unique ID of the item.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">onlyMain</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to exclude bags that are present from the search.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The table of specified <a href="../../classes/item/#">Item</a>s this inventory has.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetOwner">
@@ -6410,34 +7121,66 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L152">View source &raquo;</a>
 
+
+
 					<p>Returns the player that owns this inventory.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/player/#">Player</a>
+
 
 								<p>Owning player</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">nil</span>
+
 
 								<p>If no connected player owns this inventory</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetReceivers">
@@ -6445,29 +7188,52 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L434">View source &raquo;</a>
+
+
 
 					<p>Get all of the receivers this <a href="../../classes/inventory/#">Inventory</a> has.
  Receivers are players who will be networked the items inside the inventory.</p>
 
 <p> This function will automatically sort out invalid players for you.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
 
 								<p>result The players who are on the server and allowed to see this table.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetShouldSave">
@@ -6475,36 +7241,68 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L792">View source &raquo;</a>
+
+
 
 					<p>Gets whether or not an <a href="../../classes/inventory/#">Inventory</a> should save.
  Inventories that are marked to not save will not update in the Database, if they inventory is already saved,
  it will not be deleted when unloaded.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Returns the field <code>noSave</code>.</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Returns true if the field <code>noSave</code> is not registered to this inventory.</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="GetSize">
@@ -6512,32 +7310,60 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L81">View source &raquo;</a>
 
+
+
 					<p>Returns the grid size of this inventory.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Width of inventory</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Height of inventory</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="HasItem">
@@ -6545,63 +7371,120 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L638">View source &raquo;</a>
+
+
 
 					<p>Returns the item with the given unique ID (e.g <code>&quot;handheld_radio&quot;</code>) if it exists in this inventory.
  This method checks both
  this inventory, and any bags that this inventory has inside of it.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">targetID</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Unique ID of the item to look for</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> Item data to check for</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/item/#">Item</a>
+
 
 								<p>Item that belongs to this inventory with the given criteria</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p><code>false</code> if the item does not exist</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>local item = inventory:HasItem("handheld_radio")
 
 if (item) then
@@ -6609,12 +7492,20 @@ if (item) then
 end
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../classes/inventory/#HasItems">HasItems</a></li>
+
 						<li><a href="../../classes/inventory/#HasItemOfBase">HasItemOfBase</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="HasItemOfBase">
@@ -6622,7 +7513,11 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L714">View source &raquo;</a>
+
+
 
 					<p>Whether or not an <a href="../../classes/inventory/#">Inventory</a> has an item of a base, optionally with specified data.
  This function has an optional <code>data</code> argument, which will take a <a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>.
@@ -6630,58 +7525,111 @@ end
 
 <p> Items which are a base will automatically have base_ prefixed to their Unique ID, if you are having
  trouble finding your base, that is probably why.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">baseID</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> The Item Base's Unique ID.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> The Item's data to compare against.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">item</span>
+
 
 								<p>The first <a href="../../classes/item/#">Item</a> of <code>baseID</code> that is found and there is no <code>data</code> argument or <code>data</code> was matched.</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">false</span>
+
 
 								<p>If no <a href="../../classes/item/#">Item</a>s of <code>baseID</code> is found or the <code>data</code> argument, if specified didn't match.</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>local bHasWeaponEquipped = Entity(1):GetCharacter():GetInventory():HasItemOfBase('base_weapons', {['equip'] = true})
 if bHasWeaponEquipped then
  Entity(1):Notify('One gun is fun, two guns is Woo-tastic.')
@@ -6689,7 +7637,11 @@ end
 -- Notifies the player that they should get some more guns.
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="HasItems">
@@ -6697,127 +7649,235 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L679">View source &raquo;</a>
+
+
 
 					<p>Checks whether or not the <a href="../../classes/inventory/#">Inventory</a> has a table of items.
  This function takes a table with <strong>no</strong> keys and runs in order of first item > last item,
 this is due to the usage of the <code>#</code> operator in the function.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">targetIDs</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> A table of <a href="../../classes/item/#">Item</a> Unique ID's.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>true Whether or not the <a href="../../classes/inventory/#">Inventory</a> has all of the items.</p>
 							</li>
 
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
 
 								<p>targetIDs Your provided targetIDs table, but it will be empty.</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>false</p>
 							</li>
 
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a>
+
 
 								<p>targetIDs Table consisting of the items the <a href="../../classes/inventory/#">Inventory</a> did <strong>not</strong> have.</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>local itemFilter = {'water', 'water_sparkling'}
 if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return end
 -- Filters out if this player has both a water, and a sparkling water.
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Initialize">
 					<h1><span class="realm shared"></span></span>Inventory:Initialize(id, width, height)</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L50">View source &raquo;</a>
 
+
+
 					<p>Initializes the inventory with the provided arguments.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">id</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The <a href="../../classes/inventory/#">Inventory</a>'s database ID.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The inventory's width.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The inventory's height.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Iter">
@@ -6825,72 +7885,134 @@ if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L578">View source &raquo;</a>
 
+
+
 					<p>Returns an iterator that returns all contained items, a better way to iterate items than <code>pairs(inventory:GetItems())</code></p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">function</span>
+
 
 								<p>iterator</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="OnCheckAccess">
 					<h1><span class="realm shared"></span></span>Inventory:OnCheckAccess(client)</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L196">View source &raquo;</a>
 
+
+
 					<p>Checks whether a player has access to an inventory</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player to check access for</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the player has access to the inventory</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PrintAll">
@@ -6898,15 +8020,27 @@ if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L127">View source &raquo;</a>
 
+
+
 					<p>Prints out the id, width, height, slots and each item in each slot of an <a href="../../classes/inventory/#">Inventory</a>, used for debugging.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Remove">
@@ -6914,86 +8048,162 @@ if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L356">View source &raquo;</a>
 
+
+
 					<p>Removes an item from the inventory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">id</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The item instance ID to remove</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoReplication</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not the item's removal should not be replicated</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoDelete</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not the item should not be fully deleted</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bTransferring</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not the item is being transferred to another inventory</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The X position that the item was removed from</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The Y position that the item was removed from</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="RemoveReceiver">
@@ -7001,43 +8211,75 @@ if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L424">View source &raquo;</a>
+
+
 
 					<p>The opposite of <a href="../../classes/inventory/#AddReceiver">AddReceiver</a>.
  This function does not check the validity of <code>client</code>, therefore if <code>client</code> doesn't exist, it will error.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> The player to remove from the receiver list.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SendSlot">
 					<h1><span class="realm server"></span></span>Inventory:SendSlot(x, y, item)</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L756">View source &raquo;</a>
+
+
 
 					<p>Sends a specific slot to a character.
  This will <em>not</em> send all of the slots of the <a href="../../classes/item/#">Item</a> to the character, items can occupy multiple slots.</p>
@@ -7045,57 +8287,105 @@ if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return 
 <p> This will call <code>OnSendData</code> on the Item using all of the <a href="../../classes/inventory/#">Inventory</a>'s receivers.</p>
 
 <p> This function should <em>not</em> be used to sync an entire inventory, if you need to do that, use <a href="../../classes/inventory/#AddReceiver">AddReceiver</a> and <a href="../../classes/inventory/#Sync">Sync</a>.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">x</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The Inventory x position to send.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">y</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> The Inventory y position to send.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">item</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/item/#">Item</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> The item to send, if any.</p>
 							</li>
+
 					</ul>
+
+
+
+
+
+
 
 
 
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../classes/inventory/#AddReceiver">AddReceiver</a></li>
+
 						<li><a href="../../classes/inventory/#Sync">Sync</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetOwner">
@@ -7103,42 +8393,79 @@ if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L164">View source &raquo;</a>
 
+
+
 					<p>Sets the player that owns this inventory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">owner</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> The player to take control over the inventory.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">fullUpdate</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not to update the inventory immediately to the new owner.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetShouldSave">
@@ -7146,79 +8473,144 @@ if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L782">View source &raquo;</a>
+
+
 
 					<p>Sets whether  or not an <a href="../../classes/inventory/#">Inventory</a> should save.
  This will prevent an <a href="../../classes/inventory/#">Inventory</a> from updating in the Database, if the inventory is already saved,
  it will not be deleted when unloaded.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoSave</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 
 								<p> Whether or not the Inventory should save.</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetSize">
 					<h1><span class="realm shared"></span></span>Inventory:SetSize(width, height)</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L72">View source &raquo;</a>
 
+
+
 					<p>Sets the grid size of this inventory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> New width of inventory</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> New height of inventory</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Sync">
@@ -7226,31 +8618,58 @@ if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L960">View source &raquo;</a>
+
+
 
 					<p>Syncs the <a href="../../classes/inventory/#">Inventory</a> to the receiver.
  This will call Item.OnSendData on every item in the <a href="../../classes/inventory/#">Inventory</a>.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">receiver</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> The player to</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="__tostring">
@@ -7258,30 +8677,57 @@ if not Entity(1):GetCharacter():GetInventory():HasItems(itemFilter) then return 
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_inventory.lua#L40">View source &raquo;</a>
 
+
+
 					<p>Returns a string representation of this inventory</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>String representation</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.item.inventories[1])
  > "inventory[1]"
 </code></pre>
 
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

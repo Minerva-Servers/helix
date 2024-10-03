@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5549,7 +5558,9 @@ Up
  <a href="https://wiki.garrysmod.com/page/Category:DLabel">DLabel</a> panels, which means that making use of this panel
  will be largely the same as any DLabel panel.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5558,28 +5569,51 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L81">View source &raquo;</a>
+
+
 
 					<p>Whether or not this tooltip row should be displayed in a minimal format.  This usually means no background and/or
  smaller font. You probably won't need this if you're using regular <a href="../../panels/ixtooltiprow/#">ixTooltipRow</a> panels, but you should take into
  account if you're creating your own panels that derive from <a href="../../panels/ixtooltiprow/#">ixTooltipRow</a>.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>True if this tooltip row should be displayed in a minimal format</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Paint">
@@ -5587,44 +5621,81 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L150">View source &raquo;</a>
+
+
 
 					<p>Called when the foreground of this row should be painted.  If you are overriding this in a subclassed panel,
  make sure you call <a href="../../panels/ixtooltiprow/#PaintBackground">ixTooltipRow:PaintBackground</a> at the <em>beginning</em> of your function to make its style
  consistent with the rest of the framework.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Width of the panel</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Height of the panel</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="PaintBackground">
@@ -5632,43 +5703,80 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L138">View source &raquo;</a>
+
+
 
 					<p>Called when the background of this row should be painted.  This will paint the background with the
  <code>DrawImportantBackground</code> function set in the skin by default.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Width of the panel</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Height of the panel</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetBackgroundColor">
@@ -5676,31 +5784,58 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L100">View source &raquo;</a>
+
+
 
 					<p>Sets the background color of this row.  This should be used sparingly to avoid overwhelming players with a
  bunch of different colors that could convey different meanings.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">color</span>
 
+
 									<span class="tag"><span class="type">color</span></span>
+
+
 
 
 								<p> New color of the background. The alpha is clamped to 100-255 to ensure visibility</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SetImportant">
@@ -5708,18 +5843,30 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L90">View source &raquo;</a>
+
+
 
 					<p>Sets this row to be more prominent with a larger font and more noticable background color.  This should usually
  be used once per tooltip as a title row. For example, item tooltips have one "important" row consisting of the
  item's name. Note that this function is a fire-and-forget function; you cannot revert a row back to it's regular state
  unless you set the font/colors manually.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SizeToContents">
@@ -5727,35 +5874,61 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L109">View source &raquo;</a>
 
+
+
 					<p>Resizes this panel to fit its contents.  This should be called after setting the text.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="SizeToContentsY">
 					<h1><span class="realm client"></span></span>ixTooltipRow:SizeToContentsY()</h1>
 				</a>
 
+
 					<div class="notice error">
 						<div class="title">Internal</div>
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\derma\cl_tooltip.lua#L128">View source &raquo;</a>
 
+
+
 					<p>Resizes the height of this panel to fit its contents.</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

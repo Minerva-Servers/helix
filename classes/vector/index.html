@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5551,7 +5560,9 @@ Up
 
 <p>See the <a href="https://wiki.facepunch.com/gmod/Vector">Garry's Mod Wiki</a> for all other methods that the <a href="../../classes/vector/#">Vector</a> class has.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5560,19 +5571,37 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_vector.lua#L20">View source &raquo;</a>
 
+
+
 					<p>Returns the center of two vectors</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">other</span>
+
+
 
 
 
@@ -5580,26 +5609,48 @@ Up
 
 </p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/vector/#">Vector</a>
+
 
 								<p>The center of the two vectors</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- Prints the center of two players
  print(Entity(1):GetPos():Center(Entity(2):GetPos()))
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Distance">
@@ -5607,19 +5658,37 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_vector.lua#L41">View source &raquo;</a>
 
+
+
 					<p>Returns the distance between two vectors</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">other</span>
+
+
 
 
 
@@ -5627,26 +5696,105 @@ Up
 
 </p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>The distance between the two vectors</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- Prints the distance between two players
  print(Entity(1):GetPos():Distance(Entity(2):GetPos()))
 </code></pre>
 
+
+
+
 		</section>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="InWorld">
+					<h1><span class="realm shared"></span></span>Vector:InWorld()</h1>
+				</a>
+
+
+
+
+					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_vector.lua#L99">View source &raquo;</a>
+
+
+
+					<p>Returns whether or not the vector is in the world.</p>
+
+			</header>
+
+
+
+
+
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+
+
+
+
+							<li>
+
+									<span class="type">bool</span>
+
+
+								<p>Whether or not the vector is in the world</p>
+							</li>
+
+
+
+
+				</ul>
+
+
+
+				<h3>Example Usage</h3>
+
+					<pre><code>-- Prints whether or not the vector is in the world
+ print(Entity(1):GetPos():InWorld())
+</code></pre>
+
+
+
+
+		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Right">
@@ -5654,46 +5802,88 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_vector.lua#L57">View source &raquo;</a>
 
+
+
 					<p>Returns the right vector of the vector</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">vUp</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/vector/#">Vector</a></span>
+
+
 
 									<span class="tag default">default: Vector(0</span>
 
+
 								<p> The up vector</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/vector/#">Vector</a>
+
 
 								<p>The right vector</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- Prints the right vector of the player
  print(Entity(1):GetPos():Right())
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Round">
@@ -5701,19 +5891,37 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_vector.lua#L31">View source &raquo;</a>
 
+
+
 					<p>Rounds the vector to the nearest whole number</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">decimals</span>
+
+
 
 
 
@@ -5721,28 +5929,50 @@ Up
 
 </p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/vector/#">Vector</a>
+
 
 								<p>The rounded vector</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- Rounds the vector to the nearest whole number
 local vec = Vector(1.5, 2.3, 3.7)
 print(vec:Round())
 > 2 2 4
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="Up">
@@ -5750,46 +5980,89 @@ print(vec:Round())
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\meta\sh_vector.lua#L78">View source &raquo;</a>
 
+
+
 					<p>Returns the up vector of the vector</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">vUp</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/vector/#">Vector</a></span>
+
+
 
 									<span class="tag default">default: Vector(0</span>
 
+
 								<p> The up vector</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/vector/#">Vector</a>
+
 
 								<p>The up vector</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- Prints the up vector of the player
  print(Entity(1):GetPos():Up())
 </code></pre>
 
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

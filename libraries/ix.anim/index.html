@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5561,7 +5570,9 @@ fastZombie
 model with <a href="../../libraries/ix.anim/#ix.anim.SetModelClass">ix.anim.SetModelClass</a> in order for the correct animations to be used. If you'd like to add your own animation
 class, simply add to the <a href="../../libraries/ix.anim/#">ix.anim</a> table with a model class name and the required animation translation table.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5570,41 +5581,77 @@ class, simply add to the <a href="../../libraries/ix.anim/#">ix.anim</a> table w
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_anims.lua#L424">View source &raquo;</a>
 
+
+
 					<p>Creates a new animation class.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">name</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the animation class</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Table of animation sequences</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.anim.CreateClass("My New Class", {
     normal = {
         [ACT_MP_STAND_IDLE] = {ACT_IDLE, ACT_IDLE_ANGRY},
@@ -5627,12 +5674,20 @@ class, simply add to the <a href="../../libraries/ix.anim/#">ix.anim</a> table w
 })
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix.anim/#ix.anim.GetModelClass">ix.anim.GetModelClass</a></li>
+
 						<li><a href="../../libraries/ix.anim/#ix.anim.SetModelClass">ix.anim.SetModelClass</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.anim.GetModelClass">
@@ -5640,53 +5695,103 @@ class, simply add to the <a href="../../libraries/ix.anim/#">ix.anim</a> table w
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_anims.lua#L458">View source &raquo;</a>
 
+
+
 					<p>Gets a model's animation class.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">model</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Model to get the animation class for</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Animation class of the model</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">nil</span>
+
 
 								<p>If there was no animation associated with the given model</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.anim.GetModelClass("models/police.mdl")
  > metrocop
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.anim.SetModelClass">
@@ -5694,45 +5799,86 @@ class, simply add to the <a href="../../libraries/ix.anim/#">ix.anim</a> table w
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_anims.lua#L443">View source &raquo;</a>
 
+
+
 					<p>Sets a model's animation class.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">model</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Model name to set the animation class for</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">class</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Animation class to assign to the model</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.anim.SetModelClass("models/police.mdl", "metrocop")
 </code></pre>
 
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

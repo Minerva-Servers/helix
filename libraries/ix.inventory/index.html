@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5549,7 +5558,9 @@ Up
 
 </p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5558,41 +5569,79 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_inventory.lua#L15">View source &raquo;</a>
 
+
+
 					<p>Retrieves an inventory table.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">invID</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Index of the inventory</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/inventory/#">Inventory</a>
+
 
 								<p>Inventory table</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.inventory.Restore">
@@ -5600,66 +5649,121 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_inventory.lua#L38">View source &raquo;</a>
+
+
 
 					<p>Loads an inventory and associated items from the database into memory.  If you are passing a table into <code>invID</code>, it
  requires a table where the key is the inventory ID, and the value is a table of the width and height values. See below
  for an example.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">invID</span>
 
 
 
+
+
 								<p> Inventory ID or table of inventory IDs</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Width of inventory (this is not used when passing a table to <code>invID</code>)</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Height of inventory (this is not used when passing a table to <code>invID</code>)</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">callback</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> Function to call when inventory is restored</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.inventory.Restore({
     [10] = {5, 5},
     [11] = {7, 4}
@@ -5667,7 +5771,12 @@ Up
 -- inventories 10 and 11 with sizes (5, 5) and (7, 4) will be loaded
 </code></pre>
 
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5549,7 +5558,9 @@ Up
 
 </p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5558,45 +5569,86 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1357">View source &raquo;</a>
 
+
+
 					<p>Returns the bearing of an angle.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">ang</span>
 
+
 									<span class="tag"><span class="type">Angle</span></span>
+
+
 
 
 								<p> Angle to get the bearing of</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Bearing of the angle</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.AngleToBearing(Angle(0, 90, 0)))
  > 270
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.CapitalizeFirst">
@@ -5604,45 +5656,86 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1189">View source &raquo;</a>
 
+
+
 					<p>Returns a string that has the first letter capitalized.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">str</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> String to capitalize</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Capitalized string</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.CapitalizeFirst("hello"))
  > Hello
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.ColorToHex">
@@ -5650,45 +5743,86 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1251">View source &raquo;</a>
 
+
+
 					<p>Converts a color table to a hex color.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">color</span>
 
+
 									<span class="tag"><span class="type">color</span></span>
+
+
 
 
 								<p> Color table to convert</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Hex color</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.ColorToHex(Color(255, 255, 255)))
  > #FFFFFF
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.ColorToVector">
@@ -5696,45 +5830,86 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1241">View source &raquo;</a>
 
+
+
 					<p>Converts a color table to a vector.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">color</span>
 
+
 									<span class="tag"><span class="type">color</span></span>
+
+
 
 
 								<p> Color table to convert</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../classes/vector/#">Vector</a>
+
 
 								<p>Converted color table</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.ColorToVector(Color(255, 255, 255)))
  > 1, 1, 1
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.DimColor">
@@ -5742,70 +5917,132 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L123">View source &raquo;</a>
 
+
+
 					<p>Returns a dimmed version of the given color by the given scale.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">color</span>
 
+
 									<span class="tag"><span class="type">color</span></span>
+
+
 
 
 								<p> Color to dim</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">multiplier</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> What to multiply the red, green, and blue values by</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">alpha</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 255</span>
 
+
 								<p> Alpha to use in dimmed color</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">color</span>
+
 
 								<p>Dimmed color</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.DimColor(Color(100, 100, 100, 255), 0.5))
  > 50 50 50 255
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.DrawBlur">
@@ -5813,75 +6050,138 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L454">View source &raquo;</a>
+
+
 
 					<p>Blurs the content underneath the given panel.  This will fall back to a simple darkened rectangle if the player has
  blurring disabled.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">panel</span>
 
+
 									<span class="tag"><span class="type">panel</span></span>
+
+
 
 
 								<p> Panel to draw the blur for</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">amount</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 5</span>
 
+
 								<p> Intensity of the blur. This should be kept between 0 and 10 for performance reasons</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">passes</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 0.2</span>
 
+
 								<p> Quality of the blur. This should be kept as default</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">alpha</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 255</span>
 
+
 								<p> Opacity of the blur</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>function PANEL:Paint(width, height)
     ix.util.DrawBlur(self)
 end
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.DrawBlurAt">
@@ -5889,111 +6189,204 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L491">View source &raquo;</a>
+
+
 
 					<p>Draws a blurred rectangle with the given position and bounds.  This shouldn't be used for panels, see <a href="../../libraries/ix.util/#ix.util.DrawBlur">ix.util.DrawBlur</a>
  instead.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">x</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> X-position of the rectangle</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">y</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Y-position of the rectangle</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">width</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Width of the rectangle</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">height</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Height of the rectangle</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">amount</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 5</span>
 
+
 								<p> Intensity of the blur. This should be kept between 0 and 10 for performance reasons</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">passes</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 0.2</span>
 
+
 								<p> Quality of the blur. This should be kept as default</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">alpha</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 255</span>
 
+
 								<p> Opacity of the blur</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>hook.Add("HUDPaint", "MyHUDPaint", function()
     ix.util.DrawBlurAt(0, 0, ScrW(), ScrH())
 end)
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.DrawText">
@@ -6001,118 +6394,219 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L533">View source &raquo;</a>
 
+
+
 					<p>Draws some text with a shadow.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to draw</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">x</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> X-position of the text</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">y</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Y-position of the text</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">color</span>
 
+
 									<span class="tag"><span class="type">color</span></span>
+
+
 
 
 								<p> Color of the text to draw</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">alignX</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: TEXT_ALIGN_LEFT</span>
 
+
 								<p> Horizontal alignment of the text, using one of the <code>TEXT_ALIGN_*</code> constants</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">alignY</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: TEXT_ALIGN_LEFT</span>
 
+
 								<p> Vertical alignment of the text, using one of the <code>TEXT_ALIGN_*</code> constants</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">font</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 									<span class="tag default">default: &quot;ixGenericFont&quot;</span>
 
+
 								<p> Font to use for the text</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">alpha</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: color.a * 0.575</span>
 
+
 								<p> Alpha of the shadow</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.EmitQueuedSounds">
@@ -6120,105 +6614,196 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1128">View source &raquo;</a>
 
+
+
 					<p>Emits sounds one after the other from an entity.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entity</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Entity to play sounds from</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">sounds</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> Sound paths to play</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">delay</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p>[opt=0] How long to wait before starting to play the sounds</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">spacing</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p>[opt=0.1] How long to wait between playing each sound</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">volume</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p>[opt=75] The sound level of each sound</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">pitch</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p>[opt=100] Pitch percentage of each sound</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>How long the entire sequence of sounds will take to play</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- Play a sequence of sounds with a delay between each sound
  ix.util.EmitQueuedSounds(entity, {"sound1.wav", "sound2.wav", "sound3.wav"}, 0.5)
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.ExpandCamelCase">
@@ -6226,60 +6811,112 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L380">View source &raquo;</a>
+
+
 
 					<p>Returns a string that is the given input with spaces in between each CamelCase word.  This function will ignore any words
  that do not begin with a capital letter. The words <code>ooc</code>, <code>looc</code>, <code>afk</code>, and <code>url</code> will be automatically transformed
  into uppercase text. This will not capitalize non-ASCII letters due to limitations with Lua's pattern matching.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">input</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> String to expand</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoUpperFirst</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to avoid capitalizing the first character. This is useful for lowerCamelCase</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Expanded CamelCase string</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.ExpandCamelCase("HelloWorld"))
  > Hello World
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.FindInCrosshair">
@@ -6287,79 +6924,143 @@ end)
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1292">View source &raquo;</a>
 
+
+
 					<p>Finds a target in the player's crosshair, with an optional range.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">ply</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player to find the target for</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">target</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/entity/#">Entity</a></span>
+
+
 
 
 								<p> Target entity to check</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">range</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 									<span class="tag default">default: 0.9</span>
 
+
 								<p> Range to check for the target</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the target is in the player's crosshair</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- returns true if Entity(2) is in Entity(1)'s crosshair
 print(ix.util.FindInCrosshair(Entity(1), Entity(2)))
 > true
 </code></pre>
+
 					<pre><code>-- returns true if Entity(2) is in Entity(1)'s crosshair within 0.5 range
 print(ix.util.FindInCrosshair(Entity(1), Entity(2), 0.5))
 > true
 </code></pre>
+
 					<pre><code>-- returns false if Entity(2) is not in Entity(1)'s crosshair within 0.1 range
 print(ix.util.FindInCrosshair(Entity(1), Entity(2), 0.1))
 > false
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.FindPlayer">
@@ -6367,54 +7068,103 @@ print(ix.util.FindInCrosshair(Entity(1), Entity(2), 0.1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L254">View source &raquo;</a>
 
+
+
 					<p>Attempts to find a player by matching their name or Steam ID.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">identifier</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Search query</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bAllowPatterns</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to accept Lua patterns in <code>identifier</code></p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">player</span>
+
 
 								<p>Player that matches the given search query - this will be <code>nil</code> if a player could not be found</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.FormatStringNamed">
@@ -6422,50 +7172,91 @@ print(ix.util.FindInCrosshair(Entity(1), Entity(2), 0.1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L341">View source &raquo;</a>
 
+
+
 					<p>Returns a string that has the named arguments in the format string replaced with the given arguments.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">format</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Format string</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">Arguments</span>
 
+
 									<span class="tag"><span class="type">tab</span> or <span class="type">...</span></span>
+
+
 
 
 								<p> to pass to the formatted string. If passed a table, it will use that table as the lookup table for
  the named arguments. If passed multiple arguments, it will replace the arguments in the string in order.</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.FormatStringNamed("Hi, my name is {name}.", {name = "Bobby"}))
  > Hi, my name is Bobby.
 </code></pre>
+
 					<pre><code>print(ix.util.FormatStringNamed("Hi, my name is {name}.", "Bobby"))
  > Hi, my name is Bobby.
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetCharacters">
@@ -6473,28 +7264,50 @@ print(ix.util.FindInCrosshair(Entity(1), Entity(2), 0.1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L433">View source &raquo;</a>
+
+
 
 					<p>Returns an iterator for characters.  The resulting key/values will be a player and their corresponding characters. This
  iterator skips over any players that do not have a valid character loaded.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">Iterator</span>
+
 
 								<p>
 
 </p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>for client, character in ix.util.GetCharacters() do
     print(client, character)
 end
@@ -6503,7 +7316,11 @@ end
 -- etc.
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetClosestEntity">
@@ -6511,73 +7328,126 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1362">View source &raquo;</a>
+
+
 
 					<div class="notice warning">
 						<div class="title">Incomplete</div>
 						<p>Documentation for this section is incomplete and needs expanding.</p>
 					</div>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">pos</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">distance</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">entities</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bEntitiesIsIgnored</span>
 
 
 
+
+
 								<p>
 
 </p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetMaterial">
@@ -6585,65 +7455,123 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L237">View source &raquo;</a>
+
+
 
 					<p>Returns a cached copy of the given material, or creates and caches one if it doesn't exist.  This is a quick helper function
  if you aren't locally storing a <code>Material()</code> call.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">materialPath</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Path to the material</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">materialParameters</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p>
 
 </p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">material</span>
+
 
 								<p>The cached material</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">nil</span>
+
 
 								<p>If the material doesn't exist in the filesystem</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetStringTime">
@@ -6651,7 +7579,11 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1002">View source &raquo;</a>
+
+
 
 					<p>
 <p>Gets the amount of seconds from a given formatted string.  If no time units are specified, it is assumed minutes.
@@ -6667,50 +7599,96 @@ end
     <li><code>y</code> - Years</li>
 </ul>
 </p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to interpret a length of time from</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Amount of seconds from the length interpreted from the given string</p>
 							</li>
 
+
+
 							<div class="or"><span>OR</span></div>
 
+
+
+
+
+
 							<li>
+
 									<span class="type">0</span>
+
 
 								<p>If the given string does not have a valid time</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.GetStringTime("5y2d7w"))
  > 162086400 -- 5 years, 2 days, 7 weeks
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetTextHeight">
@@ -6718,56 +7696,107 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1431">View source &raquo;</a>
 
+
+
 					<p>Returns the height of a text string.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to get the height of</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">font</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p>[opt="ixGenericFont"] Font to use</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Height of the text</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.GetTextHeight("Hello, world!"))
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetTextSize">
@@ -6775,62 +7804,118 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1409">View source &raquo;</a>
 
+
+
 					<p>Returns the size of a text string.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to get the size of</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">font</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p>[opt="ixGenericFont"] Font to use</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Width of the text</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Height of the text</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.GetTextSize("Hello, world!"))
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetTextWidth">
@@ -6838,56 +7923,107 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1420">View source &raquo;</a>
 
+
+
 					<p>Returns the width of a text string.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to get the width of</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">font</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p>[opt="ixGenericFont"] Font to use</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Width of the text</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.GetTextWidth("Hello, world!"))
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetTimeText">
@@ -6895,45 +8031,86 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1199">View source &raquo;</a>
 
+
+
 					<p>Returns a formatted time string from a given amount of seconds.  Useful for displaying 24-hour time.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">time</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Amount of seconds</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Formatted time string</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.GetFormattedTime(3600))
  > 01:00
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetTypeFromValue">
@@ -6941,48 +8118,91 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L191">View source &raquo;</a>
 
+
+
 					<p>Returns the <a href="../../libraries/ix/#type">ix.type</a> of the given value.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">value</span>
 
 
 
+
+
 								<p> Value to get the type of</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="../../libraries/ix/#type">ix.type</a>
+
 
 								<p>Type of value</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.GetTypeFromValue("hello"))
  > 2 -- i.e the value of ix.type.string
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix/#type">ix.type</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.GetUTCTime">
@@ -6990,26 +8210,49 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L968">View source &raquo;</a>
 
+
+
 					<p>Gets the current time in the UTC time-zone.</p>
+
 			</header>
+
+
+
+
+
 
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Current time in UTC</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.HexToColor">
@@ -7017,45 +8260,86 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1271">View source &raquo;</a>
 
+
+
 					<p>Converts a hex color to a color table.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">hex</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Hex color to convert</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">Color</span>
+
 
 								<p>Converted hex color</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.HexToColor("#FFFFFF"))
  > 255, 255, 255
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.Include">
@@ -7063,53 +8347,96 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L42">View source &raquo;</a>
+
+
 
 					<p>Includes a lua file based on the prefix of the file.  This will automatically call <code>include</code> and <code>AddCSLuaFile</code> based on the
  current realm. This function should always be called shared to ensure that the client will receive the file from the server.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">fileName</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Path of the Lua file to include. The path is relative to the file that is currently running this function</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">realm</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> Realm that this file should be included in. You should usually ignore this since it
  will be automatically be chosen based on the <code>SERVER</code> and <code>CLIENT</code> globals. This value should either be <code>&quot;server&quot;</code> or
  <code>&quot;client&quot;</code> if it is filled in manually</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.util.Include("sh_config.lua")
 </code></pre>
+
 					<pre><code>ix.util.Include("cl_init.lua", "client")
 </code></pre>
+
 					<pre><code>ix.util.Include("sv_hooks.lua", "server")
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.IncludeDir">
@@ -7117,51 +8444,95 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L75">View source &raquo;</a>
 
+
+
 					<p>Includes multiple files in a directory.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">directory</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Directory to include files from</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bFromLua</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p> Whether or not to search from the base <code>lua/</code> folder, instead of contextually basing from <code>schema/</code>
  or <code>gamemode/</code></p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>ix.util.IncludeDir("libs/thirdparty")
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix.util/#ix.util.Include">ix.util.Include</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.IsColor">
@@ -7169,41 +8540,78 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L110">View source &raquo;</a>
+
+
 
 					<p>Returns <code>true</code> if the given input is a color table.  This is necessary since the engine <a href="../../libraries/ix.util/#ix.util.IsColor">IsColor</a> function only checks for
  color metatables - which are not used for regular Lua color types.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">input</span>
 
 
 
+
+
 								<p> Input to check</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the input is a color</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.IsDecimal">
@@ -7211,48 +8619,90 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1327">View source &raquo;</a>
 
+
+
 					<p>Checks if a number is below 1 and above 0.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">number</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Number to check</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the number is a decimal</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.IsDecimal(0.5))
  > true
 </code></pre>
+
 					<pre><code>print(ix.util.IsDecimal(5))
  > false
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.IsServerDown">
@@ -7260,46 +8710,87 @@ end
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1443">View source &raquo;</a>
 
+
+
 					<p>Returns a boolean indicating whether or not the specified server is down.  If no address is provided, the current server is checked.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">address</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Address of the server</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the server is down</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- returns true if the server is down
 print(ix.util.IsServerDown())
 > false
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.MetatableSafeTableMerge">
@@ -7307,54 +8798,102 @@ print(ix.util.IsServerDown())
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1170">View source &raquo;</a>
+
+
 
 					<p>Merges the contents of the second table with the content in the first one.  The destination table will be modified.
  If element is table but not metatable object, value's elements will be changed only.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">destination</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> The table you want the source table to merge with</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">source</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 
 								<p> The table you want to merge with the destination table</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="tag type">any</span>
+
 
 								<p>table</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.MetersToUnit">
@@ -7362,45 +8901,86 @@ print(ix.util.IsServerDown())
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1347">View source &raquo;</a>
 
+
+
 					<p>Converts meters to a unit.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">meters</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Meters to convert</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Converted meters</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.MetersToUnit(20))
  > 787.40157480315
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.PushBlur">
@@ -7408,31 +8988,58 @@ print(ix.util.IsServerDown())
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L519">View source &raquo;</a>
+
+
 
 					<p>Pushes a 3D2D blur to be rendered in the world.  The draw function will be called next frame in the
  <code>PostDrawOpaqueRenderables</code> hook.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">drawFunc</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
+
+
 
 
 								<p> Function to call when it needs to be drawn</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.ResetStencilValues">
@@ -7440,15 +9047,27 @@ print(ix.util.IsServerDown())
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L695">View source &raquo;</a>
 
+
+
 					<p>Resets all stencil values to known good (i.e defaults)</p>
+
 			</header>
 
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.SanitizeType">
@@ -7456,64 +9075,117 @@ print(ix.util.IsServerDown())
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L139">View source &raquo;</a>
+
+
 
 					<p>Sanitizes an input value with the given type.  This function ensures that a valid type is always returned. If a valid value
  could not be found, it will return the default value for the type. This only works for simple types - e.g it does not work
  for player, character, or Steam ID types.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">type</span>
 
+
 									<span class="tag"><a class="type" href="../../libraries/ix/#type">ix.type</a></span>
+
+
 
 
 								<p> Type to check for</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">input</span>
 
 
 
+
+
 								<p> Value to sanitize</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="tag type">any</span>
+
 
 								<p>Sanitized value</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.SanitizeType(ix.type.number, "123"))
 > 123
 print(ix.util.SanitizeType(ix.type.bool, 1))
 > true
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix/#type">ix.type</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.StringMatches">
@@ -7521,54 +9193,102 @@ print(ix.util.SanitizeType(ix.type.bool, 1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L278">View source &raquo;</a>
+
+
 
 					<p>Checks to see if two strings are equivalent using a fuzzy manner.  Both strings will be lowered, and will return <code>true</code> if
  the strings are identical, or if <code>b</code> is a substring of <code>a</code>.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">a</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> First string to check</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">b</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Second string to check</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the strings are equivalent</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.StringMatchesTable">
@@ -7576,54 +9296,102 @@ print(ix.util.SanitizeType(ix.type.bool, 1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L303">View source &raquo;</a>
+
+
 
 					<p>A more advanced version of <a href="../../libraries/ix.util/#ix.util.StringMatches">ix.util.StringMatches</a> that will check if two strings are equivalent by breaking them down into
  tables of words and checking if any of the words match.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">a</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> First string to check</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">b</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Second string to check</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the strings are equivalent</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.StripRealmPrefix">
@@ -7631,45 +9399,86 @@ print(ix.util.SanitizeType(ix.type.bool, 1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L99">View source &raquo;</a>
 
+
+
 					<p>Removes the realm prefix from a file name.  The returned string will be unchanged if there is no prefix found.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">name</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> String to strip prefix from</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>String stripped of prefix</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.StripRealmPrefix("sv_init.lua"))
  > init.lua
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.TrimText">
@@ -7677,70 +9486,132 @@ print(ix.util.SanitizeType(ix.type.bool, 1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1227">View source &raquo;</a>
 
+
+
 					<p>Trims a text to a certain length, adding an ending if it's too long.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to trim</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">length</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Maximum length of the text</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">ending</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 									<span class="tag default">default: &quot;...&quot;</span>
 
+
 								<p> Ending to add if the text is too long</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Trimmed text</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.TrimText("Hello, world!", 5))
  > Hello...
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.UnitToMeters">
@@ -7748,45 +9619,86 @@ print(ix.util.SanitizeType(ix.type.bool, 1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1337">View source &raquo;</a>
 
+
+
 					<p>Converts a unit to meters.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">unit</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Unit to convert</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">number</span>
+
 
 								<p>Converted unit</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.UnitToMeters(256))
  > 6.5024
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.VectorToColor">
@@ -7794,45 +9706,86 @@ print(ix.util.SanitizeType(ix.type.bool, 1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1261">View source &raquo;</a>
 
+
+
 					<p>Converts a color table to a vector.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">vector</span>
 
+
 									<span class="tag"><span class="type">vector</span></span>
+
+
 
 
 								<p> Vector table to convert</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<span class="type">Color</span>
+
 
 								<p>Converted vector table</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.VectorToColor(Vector(1, 1, 1)))
  > 255, 255, 255
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.WrapText">
@@ -7840,56 +9793,104 @@ print(ix.util.SanitizeType(ix.type.bool, 1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L552">View source &raquo;</a>
+
+
 
 					<p>Wraps text so it does not pass a certain width.  This function will try and break lines between words if it can,
  otherwise it will break a word if it's too long.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Text to wrap</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">maxWidth</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Maximum allowed width in pixels</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">font</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 									<span class="tag default">default: &quot;ixChatFont&quot;</span>
 
+
 								<p> Font to use for the text</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.util.ZeroNumber">
@@ -7897,57 +9898,109 @@ print(ix.util.SanitizeType(ix.type.bool, 1))
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\sh_util.lua#L1213">View source &raquo;</a>
 
+
+
 					<p>Returns a number with a certain amount of digits.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">number</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Number to pad</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">digits</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p> Amount of digits to pad to</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Padded number</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.util.ZeroNumber(5, 3))
  > 005
 </code></pre>
 
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

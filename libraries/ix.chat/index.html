@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5551,7 +5560,9 @@ will have some type of class: <code>ic</code> for regular in-character speech, <
 chat classes can affect how the message is displayed in each player's chatbox. See <a href="../../libraries/ix.chat/#ix.chat.Register">ix.chat.Register</a> and <a href="../../libraries/ix.chat/#ChatClassStructure">ChatClassStructure</a>
 to create your own chat classes.</p>
 
+
 	<h1 class="title">Functions</h1>
+
 
 		<section class="method">
 			<header>
@@ -5560,49 +5571,91 @@ to create your own chat classes.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L281">View source &raquo;</a>
+
+
 
 					<p>Formats a string to fix basic grammar - removing extra spacing at the beginning and end, capitalizing the first character,
  and making sure it ends in punctuation.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> String to format</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Formatted string</p>
 							</li>
 
+
+
+
 				</ul>
 
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.chat.Format("hello"))
  > Hello.
 </code></pre>
+
 					<pre><code>print(ix.chat.Format("wow!"))
  > Wow!
 </code></pre>
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.chat.Parse">
@@ -5610,78 +5663,147 @@ to create your own chat classes.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L207">View source &raquo;</a>
 
+
+
 					<p>Identifies which chat mode should be used.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">client</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player who is speaking</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">message</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Message to parse</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoSend</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not to send the chat message after parsing</p>
 							</li>
+
 					</ul>
+
+
+
+
+
 
 
 				<h3>Returns</h3>
 				<ul>
 
+
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Name of the chat type</p>
 							</li>
 
+
+
+
 							<li>
+
 									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
 
 								<p>Message that was parsed</p>
 							</li>
 
+
+
+
 							<li>
+
 									<span class="type">bool</span>
+
 
 								<p>Whether or not the speaker should be anonymous</p>
 							</li>
 
+
+
+
 				</ul>
 
 
+
+
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.chat.Register">
@@ -5689,42 +5811,78 @@ to create your own chat classes.</p>
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L112">View source &raquo;</a>
+
+
 
 					<p>Registers a new chat type with the information provided.  Chat classes should usually be created inside of the
  <code>InitializedChatClasses</code> hook.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">chatType</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the chat type</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
+
 									<span class="tag"><a class="type" href="../../libraries/ix.chat/#ChatClassStructure">ChatClassStructure</a></span>
+
+
 
 
 								<p> Properties and functions to assign to this chat class</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- this is the "me" chat class taken straight from the framework as an example
 ix.chat.Register("me", {
     format = "** %s %s",
@@ -5737,11 +5895,18 @@ ix.chat.Register("me", {
 })
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix.chat/#ChatClassStructure">ChatClassStructure</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.chat.Send">
@@ -5749,94 +5914,176 @@ ix.chat.Register("me", {
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L303">View source &raquo;</a>
 
+
+
 					<p>Send a chat message using the specified chat type.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Parameters</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">speaker</span>
 
+
 									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
 
 
 								<p> Player who is speaking</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">chatType</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Name of the chat type</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> Message to send</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bAnonymous</span>
 
+
 									<span class="tag"><span class="type">boolean</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not the speaker should be anonymous</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">receivers</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> The players to replicate send the message to</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">data</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+
 
 									<span class="tag default">default: nil</span>
 
+
 								<p> Additional data for this chat message</p>
 							</li>
+
 					</ul>
 
 
 
+
+
+
+
+
+
 		</section>
+
+
 	<h1 class="title">Tables</h1>
+
 
 		<section class="method">
 			<header>
@@ -5845,22 +6092,41 @@ ix.chat.Register("me", {
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L96">View source &raquo;</a>
+
+
 
 					<p>Chat messages can have different classes or "types" of messages that have different properties.  This can include how the
  text is formatted, color, hearing distance, etc.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Fields</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">prefix</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 
 								<p> What the player must type before their message in order to use this chat class. For example,
@@ -5870,123 +6136,221 @@ ix.chat.Register("me", {
 <p> <strong>NOTE:</strong> the prefix should usually start with a <code>/</code> to be consistent with the rest of the framework. However, you are able
  to use something different like the <code>LOOC</code> chat class where the prefixes are <code>.//</code>, <code>[[</code>, and <code>/LOOC</code>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">noSpaceAfter</span>
 
+
 									<span class="tag"><span class="type">bool</span></span>
 
+
+
 									<span class="tag default">default: false</span>
+
 
 								<p> Whether or not the <code>prefix</code> can be used without a space after it. For example, the
  <code>OOC</code> chat class allows you to type <code>//my message</code> instead of <code>// my message</code>. <strong>NOTE:</strong> this only works if the last
  character in the prefix is non-alphanumeric (i.e <code>noSpaceAfter</code> with <code>/Y</code> will not work, but <code>/!</code> will).</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">description</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 									<span class="tag default">optional</span>
 
+
 								<p> Description to show to the user in the chatbox when they're using this chat class</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">format</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">default: &quot;%s: \&quot;%s\&quot;&quot;</span>
+
 
 								<p> How to format a message with this chat class. The first <code>%s</code> will be the speaking
  player's name, and the second one will be their message</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">color</span>
 
+
 									<span class="tag"><span class="type">color</span></span>
+
+
 
 									<span class="tag default">default: Color(242 230 160)</span>
 
+
 								<p> Color to use when displaying a message with this chat class</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">indicator</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
+
+
 									<span class="tag default">default: &quot;chatTyping&quot;</span>
+
 
 								<p> Language phrase to use when displaying the typing indicator above the
  speaking player's head</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bNoIndicator</span>
 
+
 									<span class="tag"><span class="type">bool</span></span>
 
+
+
 									<span class="tag default">default: false</span>
+
 
 								<p> Whether or not to avoid showing the typing indicator above the speaking player's
  head</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">font</span>
 
+
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
 
 									<span class="tag default">default: ixChatFont</span>
 
+
 								<p> Font to use for displaying a message with this chat class</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">deadCanChat</span>
 
+
 									<span class="tag"><span class="type">bool</span></span>
+
+
 
 									<span class="tag default">default: false</span>
 
+
 								<p> Whether or not a dead player can send a message with this chat class</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">CanHear</span>
 
+
 									<span class="tag"><span class="type">number</span></span>
+
+
 
 
 								<p>
@@ -6004,16 +6368,27 @@ ix.chat.Register("me", {
 </code></pre>
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">CanSay</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p>
 <p> Function to run to check whether or not a player can send a message with this chat class.
@@ -6026,16 +6401,27 @@ ix.chat.Register("me", {
 </code></pre>
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">GetColor</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p>
 <p> Function to run to set the color of a message with this chat class. You should generally
@@ -6047,16 +6433,27 @@ ix.chat.Register("me", {
 </code></pre>
 </p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">OnChatAdd</span>
 
+
 									<span class="tag"><span class="type">function</span></span>
 
+
+
 									<span class="tag default">optional</span>
+
 
 								<p>
 <p> Function to run when a message with this chat class should be added to the chatbox. If
@@ -6074,15 +6471,26 @@ ix.chat.Register("me", {
 </code></pre>
 </p>
 							</li>
+
 					</ul>
+
+
+
+
+
+
 
 
 
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix.chat/#ix.chat.Register">ix.chat.Register</a></li>
+
 				</ul>
+
 		</section>
+
 		<section class="method">
 			<header>
 				<a class="anchor" id="ix.chat.classes">
@@ -6090,21 +6498,37 @@ ix.chat.Register("me", {
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L22">View source &raquo;</a>
+
+
 
 					<p>List of all chat classes that have been registered by the framework, where each key is the name of the chat class, and value
  is the chat class data.  Accessing a chat class's data is useful for when you want to copy some functionality or properties
  to use in your own. Note that if you're accessing this table, you should do so inside of the <code>InitializedChatClasses</code> hook.</p>
+
 			</header>
 
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>print(ix.chat.classes.ic.format)
  > "%s says \"%s\""
 </code></pre>
 
+
+
+
 		</section>
+
+
 
 					</div>
 			</article>

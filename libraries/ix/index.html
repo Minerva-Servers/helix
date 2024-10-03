@@ -5218,6 +5218,15 @@ Distance
 
 										<li>
 											<span class="realm shared"></span>
+											<a href="../../classes/vector/#InWorld">
+InWorld
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
 											<a href="../../classes/vector/#Right">
 Right
 											</a>
@@ -5548,7 +5557,9 @@ Up
 <p> A large majority of the framework is split into respective libraries that
  reside within <a href="../../libraries/ix/#">ix</a>.</p>
 
+
 	<h1 class="title">Tables</h1>
+
 
 		<section class="method">
 			<header>
@@ -5557,7 +5568,11 @@ Up
 				</a>
 
 
+
+
 					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\shared.lua#L37">View source &raquo;</a>
+
+
 
 					<p>A table of variable types that are used throughout the framework.  It represents types as a table with the keys being the
  name of the type, and the values being some number value. <strong>You should never directly use these number values!</strong> Using the
@@ -5566,137 +5581,248 @@ Up
 <p> This table also contains the numerical values of the types as keys. This means that if you need to check if a type exists, or
  if you need to get the name of a type, you can do a table lookup with a numerical value. Note that special types are not
  included since they are not real types that can be compared with.</p>
+
 			</header>
+
+
+
+
 
 
 					<h3>Fields</h3>
 
 
+
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">string</span>
 
 
 
+
+
 								<p> A regular string. In the case of <a href="../../libraries/ix.command/#ix.command.Add">ix.command.Add</a>, this represents one word.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">text</span>
 
 
 
+
+
 								<p> A regular string. In the case of <a href="../../libraries/ix.command/#ix.command.Add">ix.command.Add</a>, this represents all words concatenated into a string.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">number</span>
 
 
 
+
+
 								<p> Any number.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">player</span>
 
 
 
+
+
 								<p> Any player that matches the given query string in <a href="../../libraries/ix.util/#ix.util.FindPlayer">ix.util.FindPlayer</a>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">steamid</span>
 
 
 
+
+
 								<p> A string that matches the Steam ID format of <code>STEAM_X:X:XXXXXXXX</code>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">character</span>
 
 
 
+
+
 								<p> Any player's character that matches the given query string in <a href="../../libraries/ix.util/#ix.util.FindPlayer">ix.util.FindPlayer</a>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">bool</span>
 
 
 
+
+
 								<p> A string representation of a bool - <code>false</code> and <code>0</code> will return <code>false</code>, anything else will return <code>true</code>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">color</span>
 
 
 
+
+
 								<p> A color represented by its red/green/blue/alpha values.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">vector</span>
 
 
 
+
+
 								<p> A 3D vector represented by its x/y/z values.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">optional</span>
 
 
 
+
+
 								<p> This is a special type that can be bitwise OR'd with any other type to make it optional. Currently only
  supported in <a href="../../libraries/ix.command/#ix.command.Add">ix.command.Add</a>.</p>
 							</li>
+
 					</ul>
 
+
+
 					<ul>
+
+
+
+
 
 							<li>
 								<span class="tag parameter">array</span>
 
 
 
+
+
 								<p> This is a special type that can be bitwise OR'd with any other type to make it an array of that type. Currently
  only supported in <a href="../../libraries/ix.option/#ix.option.Add">ix.option.Add</a>.</p>
 							</li>
+
 					</ul>
 
 
+
+
+
+
+
 				<h3>Example Usage</h3>
+
 					<pre><code>-- checking if type exists
 print(ix.type[2] != nil)
 > true
@@ -5706,12 +5832,21 @@ print(ix.type[ix.type.string])
 > "string"
 </code></pre>
 
+
+
+
 				<h3>See Also</h3>
 				<ul>
+
 						<li><a href="../../libraries/ix.command/#ix.command.Add">ix.command.Add</a></li>
+
 						<li><a href="../../libraries/ix.option/#ix.option.Add">ix.option.Add</a></li>
+
 				</ul>
+
 		</section>
+
+
 
 					</div>
 			</article>
