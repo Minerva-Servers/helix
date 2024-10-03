@@ -1,0 +1,6128 @@
+
+
+<html>
+	<head>
+		<title>ix.chat - Minerva Servers - Helix Documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="ix.chat - Minerva Servers - Helix Documentation" />
+		<meta property="og:site_name" content="Helix Documentation" />
+
+			<meta property="og:description" content="Chat manipulation and helper functions." />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="../../ldoc.css" />
+		<link rel="stylesheet" href="../../highlight.css" />
+	</head>
+
+	<body>
+		<main>
+
+
+
+<nav>
+	<header>
+
+			<h1><a href="../../">Minerva Servers</a></h1>
+			<h1><a href="../../">Helix Documentation</a></h1>
+
+		<input id="search" type="search" autocomplete="off" placeholder="Search..." />
+	</header>
+
+	<section>
+
+
+				<details class="category" open>
+					<summary>
+						<h2>Hooks</h2>
+					</summary>
+
+					<ul>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../hooks/class/">Class</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/class/#CanSwitchTo">
+CanSwitchTo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/class/#OnLeave">
+OnLeave
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/class/#OnLoadout">
+OnLoadout
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/class/#OnSet">
+OnSet
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/class/#OnSpawn">
+OnSpawn
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../hooks/faction/">Faction</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/faction/#GetDefaultName">
+GetDefaultName
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/faction/#OnCharacterCreated">
+OnCharacterCreated
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/faction/#OnLoadout">
+OnLoadout
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/faction/#OnSpawn">
+OnSpawn
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/faction/#OnTransferred">
+OnTransferred
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../hooks/plugin/">Plugin</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#AdjustCreationPayload">
+AdjustCreationPayload
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#AdjustStaminaOffset">
+AdjustStaminaOffset
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#BuildBusinessMenu">
+BuildBusinessMenu
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanAutoFormatMessage">
+CanAutoFormatMessage
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#CanCreateCharacterInfo">
+CanCreateCharacterInfo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#CanDrawAmmoHUD">
+CanDrawAmmoHUD
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CanPlayerAccessDoor">
+CanPlayerAccessDoor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerCombineItem">
+CanPlayerCombineItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerCreateCharacter">
+CanPlayerCreateCharacter
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerDropItem">
+CanPlayerDropItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerEarnSalary">
+CanPlayerEarnSalary
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerEnterObserver">
+CanPlayerEnterObserver
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerEquipItem">
+CanPlayerEquipItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerHoldObject">
+CanPlayerHoldObject
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerInteractEntity">
+CanPlayerInteractEntity
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerInteractItem">
+CanPlayerInteractItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CanPlayerJoinClass">
+CanPlayerJoinClass
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerKnock">
+CanPlayerKnock
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerOpenShipment">
+CanPlayerOpenShipment
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerSpawnContainer">
+CanPlayerSpawnContainer
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerTakeItem">
+CanPlayerTakeItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CanPlayerThrowPunch">
+CanPlayerThrowPunch
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerTradeWithVendor">
+CanPlayerTradeWithVendor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerUnequipItem">
+CanPlayerUnequipItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CanPlayerUseBusiness">
+CanPlayerUseBusiness
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CanPlayerUseCharacter">
+CanPlayerUseCharacter
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerUseDoor">
+CanPlayerUseDoor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanPlayerUseVendor">
+CanPlayerUseVendor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#CanPlayerViewInventory">
+CanPlayerViewInventory
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CanSaveContainer">
+CanSaveContainer
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CanTransferItem">
+CanTransferItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterAttributeBoosted">
+CharacterAttributeBoosted
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterAttributeUpdated">
+CharacterAttributeUpdated
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterDeleted">
+CharacterDeleted
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterHasFlags">
+CharacterHasFlags
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterLoaded">
+CharacterLoaded
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterPostSave">
+CharacterPostSave
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterPreSave">
+CharacterPreSave
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterRecognized">
+CharacterRecognized
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CharacterRestored">
+CharacterRestored
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterVarChanged">
+CharacterVarChanged
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#CharacterVendorTraded">
+CharacterVendorTraded
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ChatboxCreated">
+ChatboxCreated
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ChatboxPositionChanged">
+ChatboxPositionChanged
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ColorSchemeChanged">
+ColorSchemeChanged
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#ContainerRemoved">
+ContainerRemoved
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#CreateCharacterInfo">
+CreateCharacterInfo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#CreateCharacterInfoCategory">
+CreateCharacterInfoCategory
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#CreateItemInteractionMenu">
+CreateItemInteractionMenu
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#CreateMenuButtons">
+CreateMenuButtons
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#CreateShipment">
+CreateShipment
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#DatabaseConnected">
+DatabaseConnected
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#DatabaseConnectionFailed">
+DatabaseConnectionFailed
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#DoPluginIncludes">
+DoPluginIncludes
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#DrawCharacterOverview">
+DrawCharacterOverview
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#DrawHelixModelView">
+DrawHelixModelView
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#DrawPlayerRagdoll">
+DrawPlayerRagdoll
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#GetCharacterDescription">
+GetCharacterDescription
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#GetCharacterName">
+GetCharacterName
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#GetChatPrefixInfo">
+GetChatPrefixInfo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#GetCrosshairAlpha">
+GetCrosshairAlpha
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#GetDefaultAttributePoints">
+GetDefaultAttributePoints
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#GetDefaultCharacterName">
+GetDefaultCharacterName
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#GetMaxPlayerCharacter">
+GetMaxPlayerCharacter
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#GetPlayerDeathSound">
+GetPlayerDeathSound
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#GetPlayerEntityMenu">
+GetPlayerEntityMenu
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#GetPlayerIcon">
+GetPlayerIcon
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#GetPlayerPainSound">
+GetPlayerPainSound
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#GetPlayerPunchDamage">
+GetPlayerPunchDamage
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#GetSalaryAmount">
+GetSalaryAmount
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#GetTypingIndicator">
+GetTypingIndicator
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#InitializedChatClasses">
+InitializedChatClasses
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#InitializedConfig">
+InitializedConfig
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#InitializedPlugins">
+InitializedPlugins
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#InitializedSchema">
+InitializedSchema
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#InventoryItemAdded">
+InventoryItemAdded
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#InventoryItemRemoved">
+InventoryItemRemoved
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#IsCharacterRecognized">
+IsCharacterRecognized
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#IsPlayerRecognized">
+IsPlayerRecognized
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#IsRecognizedChatType">
+IsRecognizedChatType
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#LoadData">
+LoadData
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#LoadFonts">
+LoadFonts
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#LoadIntro">
+LoadIntro
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#MenuSubpanelCreated">
+MenuSubpanelCreated
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#MessageReceived">
+MessageReceived
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#OnAreaChanged">
+OnAreaChanged
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#OnCharacterCreated">
+OnCharacterCreated
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnCharacterDisconnect">
+OnCharacterDisconnect
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnCharacterFallover">
+OnCharacterFallover
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnCharacterGetup">
+OnCharacterGetup
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#OnCharacterMenuCreated">
+OnCharacterMenuCreated
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnItemSpawned">
+OnItemSpawned
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#OnItemTransferred">
+OnItemTransferred
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#OnLocalVarSet">
+OnLocalVarSet
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#OnPAC3PartTransferred">
+OnPAC3PartTransferred
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnPickupMoney">
+OnPickupMoney
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#OnPlayerAreaChanged">
+OnPlayerAreaChanged
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnPlayerObserve">
+OnPlayerObserve
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnPlayerOptionSelected">
+OnPlayerOptionSelected
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnPlayerPurchaseDoor">
+OnPlayerPurchaseDoor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnPlayerRestricted">
+OnPlayerRestricted
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnPlayerUnRestricted">
+OnPlayerUnRestricted
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnSavedItemLoaded">
+OnSavedItemLoaded
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#OnWipeTables">
+OnWipeTables
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerInteractEntity">
+PlayerInteractEntity
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerInteractItem">
+PlayerInteractItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerJoinedClass">
+PlayerJoinedClass
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerLeaveSequence">
+PlayerLeaveSequence
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerLoadedCharacter">
+PlayerLoadedCharacter
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerLockedDoor">
+PlayerLockedDoor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerLockedVehicle">
+PlayerLockedVehicle
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerMessageSend">
+PlayerMessageSend
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerModelChanged">
+PlayerModelChanged
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerStaminaGained">
+PlayerStaminaGained
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerStaminaLost">
+PlayerStaminaLost
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#PlayerThrowPunch">
+PlayerThrowPunch
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerUnlockedDoor">
+PlayerUnlockedDoor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerUnlockedVehicle">
+PlayerUnlockedVehicle
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerUse">
+PlayerUse
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PlayerUseDoor">
+PlayerUseDoor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#PlayerWeaponChanged">
+PlayerWeaponChanged
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#PluginLoaded">
+PluginLoaded
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#PluginShouldLoad">
+PluginShouldLoad
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#PluginUnloaded">
+PluginUnloaded
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PopulateCharacterInfo">
+PopulateCharacterInfo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PopulateEntityInfo">
+PopulateEntityInfo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PopulateHelpMenu">
+PopulateHelpMenu
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PopulateImportantCharacterInfo">
+PopulateImportantCharacterInfo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PopulateItemTooltip">
+PopulateItemTooltip
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PopulatePlayerTooltip">
+PopulatePlayerTooltip
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PopulateScoreboardPlayerMenu">
+PopulateScoreboardPlayerMenu
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PostChatboxDraw">
+PostChatboxDraw
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PostDrawHelixModelView">
+PostDrawHelixModelView
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#PostDrawInventory">
+PostDrawInventory
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PostLoadData">
+PostLoadData
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PostPlayerLoadout">
+PostPlayerLoadout
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PostPlayerSay">
+PostPlayerSay
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#PostSetupActs">
+PostSetupActs
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PreCharacterDeleted">
+PreCharacterDeleted
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PrePlayerLoadedCharacter">
+PrePlayerLoadedCharacter
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#PrePlayerMessageSend">
+PrePlayerMessageSend
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#SaveData">
+SaveData
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ScreenResolutionChanged">
+ScreenResolutionChanged
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#SetupActs">
+SetupActs
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/plugin/#SetupAreaProperties">
+SetupAreaProperties
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#ShipmentItemTaken">
+ShipmentItemTaken
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ShouldBarDraw">
+ShouldBarDraw
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#ShouldDeleteSavedItems">
+ShouldDeleteSavedItems
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ShouldDisplayArea">
+ShouldDisplayArea
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ShouldDrawCrosshair">
+ShouldDrawCrosshair
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ShouldDrawItemSize">
+ShouldDrawItemSize
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ShouldHideBars">
+ShouldHideBars
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#ShouldPermakillCharacter">
+ShouldPermakillCharacter
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#ShouldPlayerDrowned">
+ShouldPlayerDrowned
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#ShouldRemoveRagdollOnDeath">
+ShouldRemoveRagdollOnDeath
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#ShouldRestoreInventory">
+ShouldRestoreInventory
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ShouldShowPlayerOnScoreboard">
+ShouldShowPlayerOnScoreboard
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#ShouldSpawnClientRagdoll">
+ShouldSpawnClientRagdoll
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ShowEntityMenu">
+ShowEntityMenu
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#ThirdPersonToggled">
+ThirdPersonToggled
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#UpdateCharacterInfo">
+UpdateCharacterInfo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#UpdateCharacterInfoCategory">
+UpdateCharacterInfoCategory
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/plugin/#VoiceDistanceChanged">
+VoiceDistanceChanged
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#WeaponCycleSound">
+WeaponCycleSound
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../hooks/plugin/#WeaponSelectSound">
+WeaponSelectSound
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../hooks/rank/">Rank</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../hooks/rank/#CanSwitchTo">
+CanSwitchTo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/rank/#OnLeave">
+OnLeave
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/rank/#OnLoadout">
+OnLoadout
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/rank/#OnSet">
+OnSet
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../hooks/rank/#OnSpawn">
+OnSpawn
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+					</ul>
+				</details>
+
+
+
+				<details class="category" open>
+					<summary>
+						<h2>Panels</h2>
+					</summary>
+
+					<ul>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../panels/ixlabel/">ixLabel</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#CalculateAlignment">
+CalculateAlignment
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#DrawKernedText">
+DrawKernedText
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#DrawText">
+DrawText
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#GetBackgroundColor">
+GetBackgroundColor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#GetContentAlignment">
+GetContentAlignment
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#GetContentSize">
+GetContentSize
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#GetFont">
+GetFont
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#GetKerning">
+GetKerning
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#GetPadding">
+GetPadding
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#GetScaleWidth">
+GetScaleWidth
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#GetText">
+GetText
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#GetTextColor">
+GetTextColor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SetBackgroundColor">
+SetBackgroundColor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SetContentAlignment">
+SetContentAlignment
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SetDropShadow">
+SetDropShadow
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SetFont">
+SetFont
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SetKerning">
+SetKerning
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SetPadding">
+SetPadding
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SetScaleWidth">
+SetScaleWidth
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SetText">
+SetText
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SetTextColor">
+SetTextColor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixlabel/#SizeToContents">
+SizeToContents
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../panels/ixtooltip/">ixTooltip</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltip/#AddRow">
+AddRow
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltip/#AddRowAfter">
+AddRowAfter
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltip/#GetCursorPosition">
+GetCursorPosition
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltip/#GetRow">
+GetRow
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltip/#IsMinimal">
+IsMinimal
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltip/#SetEntity">
+SetEntity
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltip/#SizeToContents">
+SizeToContents
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../panels/ixtooltiprow/">ixTooltipRow</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltiprow/#IsMinimal">
+IsMinimal
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltiprow/#Paint">
+Paint
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltiprow/#PaintBackground">
+PaintBackground
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltiprow/#SetBackgroundColor">
+SetBackgroundColor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltiprow/#SetImportant">
+SetImportant
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltiprow/#SizeToContents">
+SizeToContents
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../panels/ixtooltiprow/#SizeToContentsY">
+SizeToContentsY
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+					</ul>
+				</details>
+
+
+
+				<details class="category" open>
+					<summary>
+						<h2>Libraries</h2>
+					</summary>
+
+					<ul>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix/">ix</a></summary>
+
+									<ul>
+
+
+
+
+
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.act/">ix.act</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.act/#ix.act.Register">
+Register
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.act/#ix.act.Remove">
+Remove
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.anim/">ix.anim</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.anim/#ix.anim.CreateClass">
+CreateClass
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.anim/#ix.anim.GetModelClass">
+GetModelClass
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.anim/#ix.anim.SetModelClass">
+SetModelClass
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.char/">ix.char</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.char/#ix.char.Create">
+Create
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.char/#ix.char.New">
+New
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.char/#ix.char.Restore">
+Restore
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.char/#ix.char.RestoreVars">
+RestoreVars
+											</a>
+										</li>
+
+
+
+
+
+
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details open>
+									<summary><a href="../../libraries/ix.chat/">ix.chat</a></summary>
+
+									<ul>
+
+
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.chat/#ix.chat.Format">
+Format
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.chat/#ix.chat.Parse">
+Parse
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.chat/#ix.chat.Register">
+Register
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.chat/#ix.chat.Send">
+Send
+											</a>
+										</li>
+
+
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.class/">ix.class</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.class/#ix.class.CanSwitchTo">
+CanSwitchTo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.class/#ix.class.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.class/#ix.class.GetPlayers">
+GetPlayers
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.class/#ix.class.LoadFromDir">
+LoadFromDir
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.command/">ix.command</a></summary>
+
+									<ul>
+
+
+
+
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.command/#ix.command.Add">
+Add
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.command/#ix.command.ExtractArgs">
+ExtractArgs
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.command/#ix.command.FindAll">
+FindAll
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.command/#ix.command.FindPlayer">
+FindPlayer
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.command/#ix.command.HasAccess">
+HasAccess
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.command/#ix.command.Parse">
+Parse
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.command/#ix.command.Run">
+Run
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.command/#ix.command.Send">
+Send
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.config/">ix.config</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.config/#ix.config.Add">
+Add
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.config/#ix.config.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.config/#ix.config.Load">
+Load
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.config/#ix.config.Save">
+Save
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.config/#ix.config.Set">
+Set
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.config/#ix.config.SetDefault">
+SetDefault
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.currency/">ix.currency</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.currency/#ix.currency.Format">
+Format
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.currency/#ix.currency.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.currency/#ix.currency.Set">
+Set
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.currency/#ix.currency.Spawn">
+Spawn
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.data/">ix.data</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.data/#ix.data.Delete">
+Delete
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.data/#ix.data.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.data/#ix.data.Set">
+Set
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.date/">ix.date</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.date/#ix.date.Construct">
+Construct
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.date/#ix.date.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.date/#ix.date.GetFormatted">
+GetFormatted
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.date/#ix.date.GetSerialized">
+GetSerialized
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.date/#ix.date.Initialize">
+Initialize
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.date/#ix.date.ResolveOffset">
+ResolveOffset
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.date/#ix.date.Save">
+Save
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.date/#ix.date.Send">
+Send
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.date/#ix.date.UpdateTimescale">
+UpdateTimescale
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.faction/">ix.faction</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.faction/#ix.faction.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.faction/#ix.faction.GetIndex">
+GetIndex
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.faction/#ix.faction.GetPlayers">
+GetPlayers
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.faction/#ix.faction.HasWhitelist">
+HasWhitelist
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.faction/#ix.faction.LoadFromDir">
+LoadFromDir
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.flag/">ix.flag</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.flag/#ix.flag.Add">
+Add
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.inventory/">ix.inventory</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.inventory/#ix.inventory.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.inventory/#ix.inventory.Restore">
+Restore
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.item/">ix.item</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.item/#ix.item.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.item/#ix.item.Spawn">
+Spawn
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.lang/">ix.lang</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.lang/#ix.lang.AddTable">
+AddTable
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.lang/#ix.lang.LoadFromDir">
+LoadFromDir
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.log/">ix.log</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.log/#ix.log.Add">
+Add
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.log/#ix.log.AddType">
+AddType
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.menu/">ix.menu</a></summary>
+
+									<ul>
+
+
+
+
+
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.menu/#ix.menu.IsOpen">
+IsOpen
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.menu/#ix.menu.NetworkChoice">
+NetworkChoice
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.menu/#ix.menu.Open">
+Open
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.notice/">ix.notice</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.notice/#ix.util.Notify">
+ix.util.Notify
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.notice/#ix.util.NotifyLocalized">
+ix.util.NotifyLocalized
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.option/">ix.option</a></summary>
+
+									<ul>
+
+
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.option/#ix.option.Add">
+Add
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.option/#ix.option.AddQuick">
+AddQuick
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.option/#ix.option.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.option/#ix.option.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.option/#ix.option.GetAll">
+GetAll
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.option/#ix.option.GetAllByCategories">
+GetAllByCategories
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.option/#ix.option.Load">
+Load
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.option/#ix.option.Save">
+Save
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.option/#ix.option.Set">
+Set
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.option/#ix.option.Sync">
+Sync
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.rank/">ix.rank</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.rank/#ix.rank.CanSwitchTo">
+CanSwitchTo
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.rank/#ix.rank.Get">
+Get
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.rank/#ix.rank.GetPlayers">
+GetPlayers
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.rank/#ix.rank.LoadFromDir">
+LoadFromDir
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.storage/">ix.storage</a></summary>
+
+									<ul>
+
+
+
+
+
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.storage/#ix.storage.AddReceiver">
+AddReceiver
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.storage/#ix.storage.Close">
+Close
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.storage/#ix.storage.CreateContext">
+CreateContext
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.storage/#ix.storage.InUse">
+InUse
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.storage/#ix.storage.InUseBy">
+InUseBy
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.storage/#ix.storage.Open">
+Open
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.storage/#ix.storage.RemoveContext">
+RemoveContext
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.storage/#ix.storage.RemoveReceiver">
+RemoveReceiver
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../libraries/ix.storage/#ix.storage.Sync">
+Sync
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../libraries/ix.util/">ix.util</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.AngleToBearing">
+AngleToBearing
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.CapitalizeFirst">
+CapitalizeFirst
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.ColorToHex">
+ColorToHex
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.ColorToVector">
+ColorToVector
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.DimColor">
+DimColor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.DrawBlur">
+DrawBlur
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.DrawBlurAt">
+DrawBlurAt
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.DrawText">
+DrawText
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.EmitQueuedSounds">
+EmitQueuedSounds
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.ExpandCamelCase">
+ExpandCamelCase
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.FindInCrosshair">
+FindInCrosshair
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.FindPlayer">
+FindPlayer
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.FormatStringNamed">
+FormatStringNamed
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetCharacters">
+GetCharacters
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetClosestEntity">
+GetClosestEntity
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetMaterial">
+GetMaterial
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetStringTime">
+GetStringTime
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetTextHeight">
+GetTextHeight
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetTextSize">
+GetTextSize
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetTextWidth">
+GetTextWidth
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetTimeText">
+GetTimeText
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetTypeFromValue">
+GetTypeFromValue
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.GetUTCTime">
+GetUTCTime
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.HexToColor">
+HexToColor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.Include">
+Include
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.IncludeDir">
+IncludeDir
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.IsColor">
+IsColor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.IsDecimal">
+IsDecimal
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.IsServerDown">
+IsServerDown
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.MetatableSafeTableMerge">
+MetatableSafeTableMerge
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.MetersToUnit">
+MetersToUnit
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.PushBlur">
+PushBlur
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.ResetStencilValues">
+ResetStencilValues
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.SanitizeType">
+SanitizeType
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.StringMatches">
+StringMatches
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.StringMatchesTable">
+StringMatchesTable
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.StripRealmPrefix">
+StripRealmPrefix
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.TrimText">
+TrimText
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.UnitToMeters">
+UnitToMeters
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.VectorToColor">
+VectorToColor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm client"></span>
+											<a href="../../libraries/ix.util/#ix.util.WrapText">
+WrapText
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../libraries/ix.util/#ix.util.ZeroNumber">
+ZeroNumber
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+					</ul>
+				</details>
+
+
+
+				<details class="category" open>
+					<summary>
+						<h2>Classes</h2>
+					</summary>
+
+					<ul>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../classes/character/">Character</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#AddBoost">
+AddBoost
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#Ban">
+Ban
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetAttribute">
+GetAttribute
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetBoost">
+GetBoost
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetBoosts">
+GetBoosts
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetClass">
+GetClass
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#GetCreateTime">
+GetCreateTime
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetData">
+GetData
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetDescription">
+GetDescription
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetFaction">
+GetFaction
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetFlags">
+GetFlags
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetID">
+GetID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetInventory">
+GetInventory
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#GetLastJoinTime">
+GetLastJoinTime
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetModel">
+GetModel
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetMoney">
+GetMoney
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetName">
+GetName
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#GetPlayer">
+GetPlayer
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#GetSchema">
+GetSchema
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#GetSteamID">
+GetSteamID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#GiveFlags">
+GiveFlags
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#HasFlags">
+HasFlags
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#JoinClass">
+JoinClass
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#JoinRank">
+JoinRank
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#Kick">
+Kick
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#KickClass">
+KickClass
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#KickRank">
+KickRank
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#RemoveBoost">
+RemoveBoost
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#Save">
+Save
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#SetAttrib">
+SetAttrib
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#SetData">
+SetData
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#SetDescription">
+SetDescription
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#SetFaction">
+SetFaction
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#SetFlags">
+SetFlags
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#SetModel">
+SetModel
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#SetMoney">
+SetMoney
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#SetName">
+SetName
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#Sync">
+Sync
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#TakeFlags">
+TakeFlags
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/character/#UpdateAttrib">
+UpdateAttrib
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#__eq">
+__eq
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/character/#__tostring">
+__tostring
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../classes/entity/">Entity</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/entity/#BlastDoor">
+BlastDoor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/entity/#ClearNetVars">
+ClearNetVars
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/entity/#GetBlocker">
+GetBlocker
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#GetDoorPartner">
+GetDoorPartner
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#GetNetVar">
+GetNetVar
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#IsChair">
+IsChair
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/entity/#IsDoor">
+IsDoor
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/entity/#IsLocked">
+IsLocked
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/entity/#SendNetVar">
+SendNetVar
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/entity/#SetNetVar">
+SetNetVar
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../classes/inventory/">Inventory</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/inventory/#Add">
+Add
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#AddReceiver">
+AddReceiver
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#CanItemFit">
+CanItemFit
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#FindEmptySlot">
+FindEmptySlot
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#FindError">
+FindError
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetFilledSlotCount">
+GetFilledSlotCount
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetFreeSlotCount">
+GetFreeSlotCount
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetID">
+GetID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetItemAt">
+GetItemAt
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetItemByID">
+GetItemByID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetItemCount">
+GetItemCount
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetItems">
+GetItems
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetItemsByBase">
+GetItemsByBase
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetItemsByID">
+GetItemsByID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetItemsByUniqueID">
+GetItemsByUniqueID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetOwner">
+GetOwner
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetReceivers">
+GetReceivers
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/inventory/#GetShouldSave">
+GetShouldSave
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#GetSize">
+GetSize
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#HasItem">
+HasItem
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#HasItemOfBase">
+HasItemOfBase
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#HasItems">
+HasItems
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#Initialize">
+Initialize
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#Iter">
+Iter
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#OnCheckAccess">
+OnCheckAccess
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#PrintAll">
+PrintAll
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#Remove">
+Remove
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#RemoveReceiver">
+RemoveReceiver
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/inventory/#SendSlot">
+SendSlot
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#SetOwner">
+SetOwner
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/inventory/#SetShouldSave">
+SetShouldSave
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#SetSize">
+SetSize
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/inventory/#Sync">
+Sync
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/inventory/#__tostring">
+__tostring
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../classes/item/">Item</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#Call">
+Call
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#GetCharacterID">
+GetCharacterID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#GetData">
+GetData
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#GetDescription">
+GetDescription
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/item/#GetEntity">
+GetEntity
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#GetID">
+GetID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#GetModel">
+GetModel
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#GetName">
+GetName
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#GetOwner">
+GetOwner
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#GetPlayerID">
+GetPlayerID
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#GetSkin">
+GetSkin
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#Hook">
+Hook
+											</a>
+										</li>
+
+
+
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#PostHook">
+PostHook
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#Print">
+Print
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#PrintData">
+PrintData
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#Remove">
+Remove
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#SetData">
+SetData
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/item/#Spawn">
+Spawn
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/item/#Transfer">
+Transfer
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#__eq">
+__eq
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/item/#__tostring">
+__tostring
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../classes/player/">Player</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#CanShootWeapon">
+CanShootWeapon
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#ChatNotify">
+ChatNotify
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#ChatNotifyLocalized">
+ChatNotifyLocalized
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#CreateServerRagdoll">
+CreateServerRagdoll
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#DoStaredAction">
+DoStaredAction
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#ForceSequence">
+ForceSequence
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetCharacter">
+GetCharacter
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetItemDropPos">
+GetItemDropPos
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetLocalVar">
+GetLocalVar
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetName">
+GetName
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#GetPlayTime">
+GetPlayTime
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsFemale">
+IsFemale
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsRestricted">
+IsRestricted
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsRunning">
+IsRunning
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsStuck">
+IsStuck
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#IsWepRaised">
+IsWepRaised
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#LeaveSequence">
+LeaveSequence
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#Notify">
+Notify
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#NotifyLocalized">
+NotifyLocalized
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#PerformInteraction">
+PerformInteraction
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#RequestString">
+RequestString
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/player/#ResetBodygroups">
+ResetBodygroups
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetAction">
+SetAction
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetLocalVar">
+SetLocalVar
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetRagdolled">
+SetRagdolled
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetRestricted">
+SetRestricted
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SetWepRaised">
+SetWepRaised
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#SyncVars">
+SyncVars
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="../../classes/player/#ToggleWepRaised">
+ToggleWepRaised
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+
+							<li>
+
+									<details >
+									<summary><a href="../../classes/vector/">Vector</a></summary>
+
+									<ul>
+
+
+
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/vector/#Center">
+Center
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/vector/#Distance">
+Distance
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/vector/#Right">
+Right
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/vector/#Round">
+Round
+											</a>
+										</li>
+
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="../../classes/vector/#Up">
+Up
+											</a>
+										</li>
+
+
+
+
+
+
+									</ul>
+									</details>
+
+							</li>
+
+					</ul>
+				</details>
+
+
+
+				<details class="category" open>
+					<summary>
+						<h2>Manual</h2>
+					</summary>
+
+					<ul>
+
+
+							<li>
+
+									<a href="../../manual/converting-from-clockwork/">Clockwork to Helix Migration</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</li>
+
+
+							<li>
+
+									<a href="../../manual/creating-classes/">Creating Classes</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</li>
+
+
+							<li>
+
+									<a href="../../manual/creating-factions/">Creating Factions</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</li>
+
+
+							<li>
+
+									<a href="../../manual/creating-items/">Creating Items</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</li>
+
+
+							<li>
+
+									<a href="../../manual/creating-plugins/">Creating Plugins</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</li>
+
+
+							<li>
+
+									<a href="../../manual/creating-schemas/">Creating Schemas</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</li>
+
+
+							<li>
+
+									<a href="../../manual/differences/">Differences</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</li>
+
+
+							<li>
+
+									<a href="../../manual/getting-started/">Getting Started</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+							</li>
+
+					</ul>
+				</details>
+
+
+	</section>
+</nav>
+
+
+			<article>
+					<div class="wrapper">
+
+<header class="module">
+	<h1>ix.chat</h1>
+	<h2>Chat manipulation and helper functions.</h2>
+</header>
+
+<p>Chat messages are a core part of the framework - it's takes up a good chunk of the gameplay, and is also used to interact with
+the framework. Chat messages can have types or "classes" that describe how the message should be interpreted. All chat messages
+will have some type of class: <code>ic</code> for regular in-character speech, <code>me</code> for actions, <code>ooc</code> for out-of-character, etc. These
+chat classes can affect how the message is displayed in each player's chatbox. See <a href="../../libraries/ix.chat/#ix.chat.Register">ix.chat.Register</a> and <a href="../../libraries/ix.chat/#ChatClassStructure">ChatClassStructure</a>
+to create your own chat classes.</p>
+
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="ix.chat.Format">
+					<h1><span class="realm shared"></span></span>ix.chat.Format(text)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L281">View source &raquo;</a>
+
+					<p>Formats a string to fix basic grammar - removing extra spacing at the beginning and end, capitalizing the first character,
+ and making sure it ends in punctuation.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">text</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+								<p> String to format</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+								<p>Formatted string</p>
+							</li>
+
+				</ul>
+
+				<h3>Example Usage</h3>
+					<pre><code>print(ix.chat.Format("hello"))
+ > Hello.
+</code></pre>
+					<pre><code>print(ix.chat.Format("wow!"))
+ > Wow!
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ix.chat.Parse">
+					<h1><span class="realm shared"></span></span>ix.chat.Parse(client, message, bNoSend)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L207">View source &raquo;</a>
+
+					<p>Identifies which chat mode should be used.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">client</span>
+
+									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
+								<p> Player who is speaking</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">message</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+								<p> Message to parse</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">bNoSend</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not to send the chat message after parsing</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+								<p>Name of the chat type</p>
+							</li>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>
+
+								<p>Message that was parsed</p>
+							</li>
+
+							<li>
+									<span class="type">bool</span>
+
+								<p>Whether or not the speaker should be anonymous</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ix.chat.Register">
+					<h1><span class="realm shared"></span></span>ix.chat.Register(chatType, data)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L112">View source &raquo;</a>
+
+					<p>Registers a new chat type with the information provided.  Chat classes should usually be created inside of the
+ <code>InitializedChatClasses</code> hook.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">chatType</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+								<p> Name of the chat type</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">data</span>
+
+									<span class="tag"><a class="type" href="../../libraries/ix.chat/#ChatClassStructure">ChatClassStructure</a></span>
+
+
+								<p> Properties and functions to assign to this chat class</p>
+							</li>
+					</ul>
+
+
+				<h3>Example Usage</h3>
+					<pre><code>-- this is the "me" chat class taken straight from the framework as an example
+ix.chat.Register("me", {
+    format = "** %s %s",
+    color = Color(255, 50, 50),
+    CanHear = ix.config.Get("chatRange", 280) * 2,
+    prefix = {"/Me", "/Action"},
+    description = "@cmdMe",
+    indicator = "chatPerforming",
+    deadCanChat = true
+})
+</code></pre>
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/ix.chat/#ChatClassStructure">ChatClassStructure</a></li>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ix.chat.Send">
+					<h1><span class="realm server"></span></span>ix.chat.Send(speaker, chatType, text, bAnonymous, receivers, data)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L303">View source &raquo;</a>
+
+					<p>Send a chat message using the specified chat type.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">speaker</span>
+
+									<span class="tag"><a class="type" href="../../classes/player/#">Player</a></span>
+
+
+								<p> Player who is speaking</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">chatType</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+								<p> Name of the chat type</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">text</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+								<p> Message to send</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">bAnonymous</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not the speaker should be anonymous</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">receivers</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+									<span class="tag default">default: nil</span>
+
+								<p> The players to replicate send the message to</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">data</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+									<span class="tag default">default: nil</span>
+
+								<p> Additional data for this chat message</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+	<h1 class="title">Tables</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="ChatClassStructure">
+					<h1><span class="realm shared"></span></span>ChatClassStructure</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L96">View source &raquo;</a>
+
+					<p>Chat messages can have different classes or "types" of messages that have different properties.  This can include how the
+ text is formatted, color, hearing distance, etc.</p>
+			</header>
+
+
+					<h3>Fields</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">prefix</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+								<p> What the player must type before their message in order to use this chat class. For example,
+ having a prefix of <code>/Y</code> will require to type <code>/Y I am yelling</code> in order to send a message with this chat class. This can also
+ be a table of strings if you want to allow multiple prefixes, such as <code>{&quot;//&quot;, &quot;/OOC&quot;}</code>.</p>
+
+<p> <strong>NOTE:</strong> the prefix should usually start with a <code>/</code> to be consistent with the rest of the framework. However, you are able
+ to use something different like the <code>LOOC</code> chat class where the prefixes are <code>.//</code>, <code>[[</code>, and <code>/LOOC</code>.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">noSpaceAfter</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not the <code>prefix</code> can be used without a space after it. For example, the
+ <code>OOC</code> chat class allows you to type <code>//my message</code> instead of <code>// my message</code>. <strong>NOTE:</strong> this only works if the last
+ character in the prefix is non-alphanumeric (i.e <code>noSpaceAfter</code> with <code>/Y</code> will not work, but <code>/!</code> will).</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">description</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> Description to show to the user in the chatbox when they're using this chat class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">format</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+									<span class="tag default">default: &quot;%s: \&quot;%s\&quot;&quot;</span>
+
+								<p> How to format a message with this chat class. The first <code>%s</code> will be the speaking
+ player's name, and the second one will be their message</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">color</span>
+
+									<span class="tag"><span class="type">color</span></span>
+
+									<span class="tag default">default: Color(242 230 160)</span>
+
+								<p> Color to use when displaying a message with this chat class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">indicator</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+									<span class="tag default">default: &quot;chatTyping&quot;</span>
+
+								<p> Language phrase to use when displaying the typing indicator above the
+ speaking player's head</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">bNoIndicator</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not to avoid showing the typing indicator above the speaking player's
+ head</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">font</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+									<span class="tag default">default: ixChatFont</span>
+
+								<p> Font to use for displaying a message with this chat class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">deadCanChat</span>
+
+									<span class="tag"><span class="type">bool</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not a dead player can send a message with this chat class</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CanHear</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p>
+<p> This can be either a <code>number</code> representing how far away another player can hear this message.
+ IC messages will use the <code>chatRange</code> config, for example. This can also be a function, which returns <code>true</code> if the given
+ listener can hear the message emitted from a speaker.</p>
+<pre><code> -- message can be heard by any player 1000 units away from the speaking player
+ CanHear = 1000
+</code></pre>
+<p> OR</p>
+<pre><code> CanHear = function(self, speaker, listener)
+     -- the speaking player will be heard by everyone
+     return true
+ end
+</code></pre>
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">CanSay</span>
+
+									<span class="tag"><span class="type">function</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p>
+<p> Function to run to check whether or not a player can send a message with this chat class.
+ By default, it will return <code>false</code> if the player is dead and <code>deadCanChat</code> is <code>false</code>. Overriding this function will prevent
+ <code>deadCanChat</code> from working, and you must implement this functionality manually.</p>
+<pre><code> CanSay = function(self, speaker, text)
+     -- the speaker will never be able to send a message with this chat class
+     return false
+ end
+</code></pre>
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">GetColor</span>
+
+									<span class="tag"><span class="type">function</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p>
+<p> Function to run to set the color of a message with this chat class. You should generally
+ stick to using <code>color</code>, but this is useful for when you want the color of the message to change with some criteria.</p>
+<pre><code> GetColor = function(self, speaker, text)
+     -- each message with this chat class will be colored a random shade of red
+     return Color(math.random(120, 200), 0, 0)
+ end
+</code></pre>
+</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">OnChatAdd</span>
+
+									<span class="tag"><span class="type">function</span></span>
+
+									<span class="tag default">optional</span>
+
+								<p>
+<p> Function to run when a message with this chat class should be added to the chatbox. If
+ using this function, make sure you end the function by calling <code>chat.AddText</code> in order for the text to show up.</p>
+
+<p> <strong>NOTE:</strong> using your own <code>OnChatAdd</code> function will prevent <code>color</code>, <code>GetColor</code>, or <code>format</code> from being used since you'll be
+ overriding the base function that uses those properties. In such cases you'll need to add that functionality back in
+ manually. In general, you should avoid overriding this function where possible. The <a href="../../libraries/ix.data/">data</a> argument in the function is
+ whatever is passed into the same <a href="../../libraries/ix.data/">data</a> argument in <a href="../../libraries/ix.chat/#ix.chat.Send">ix.chat.Send</a>.</p>
+
+<pre><code> OnChatAdd = function(self, speaker, text, bAnonymous, data)
+     -- adds white text in the form of "Player Name: Message contents"
+     chat.AddText(color_white, speaker:GetName(), ": ", text)
+ end
+</code></pre>
+</p>
+							</li>
+					</ul>
+
+
+
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/ix.chat/#ix.chat.Register">ix.chat.Register</a></li>
+				</ul>
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="ix.chat.classes">
+					<h1><span class="realm shared"></span></span>ix.chat.classes</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/Minerva-Servers/helix/tree/Minerva-Serverstree/master/gamemode\core\libs\sh_chatbox.lua#L22">View source &raquo;</a>
+
+					<p>List of all chat classes that have been registered by the framework, where each key is the name of the chat class, and value
+ is the chat class data.  Accessing a chat class's data is useful for when you want to copy some functionality or properties
+ to use in your own. Note that if you're accessing this table, you should do so inside of the <code>InitializedChatClasses</code> hook.</p>
+			</header>
+
+
+
+				<h3>Example Usage</h3>
+					<pre><code>print(ix.chat.classes.ic.format)
+ > "%s says \"%s\""
+</code></pre>
+
+		</section>
+
+					</div>
+			</article>
+		</main>
+
+		<script type="text/javascript" src="../../app.js"></script>
+		<script type="text/javascript" src="../../highlight.min.js"></script>
+		<script type="text/javascript">
+			var elements = document.querySelectorAll("pre code")
+
+			hljs.configure({
+				languages: ["lua"]
+			});
+
+			for (var i = 0; i < elements.length; i++)
+			{
+				hljs.highlightBlock(elements[i]);
+			}
+		</script>
+	</body>
+</html>
